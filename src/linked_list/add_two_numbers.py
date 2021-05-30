@@ -4,7 +4,7 @@ class ListNode:
         self.next = next
 
 
-class Solution:
+class AddTwoNumbers:
     """
     Problem Link: https://leetcode.com/problems/add-two-numbers/
     """

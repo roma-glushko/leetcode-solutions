@@ -1,9 +1,9 @@
-from unittest import TestCase, main
+from unittest import TestCase
 
 from .best_time_to_buy_and_sell_stock import BestTimeToBuyAndSellStock
 
 
-class TestBestTimeToBuyAndSellStock(TestCase):
+class BestTimeToBuyAndSellStockTest(TestCase):
 
     def test_default_input(self):
         solution = BestTimeToBuyAndSellStock()

@@ -3,10 +3,10 @@ from unittest import TestCase
 from .reverse_integer import ReverseInteger
 
 
-class TestReverseInteger(TestCase):
+class ReverseIntegerTest(TestCase):
 
-    def test_default_grid(self):
+    def test_default_input(self):
         solution = ReverseInteger()
-        perimeter = solution.reverse(123)
+        reversed_number = solution.reverse(123)
 
-        self.assertEqual(perimeter, 321)
+        self.assertEqual(reversed_number, 321)

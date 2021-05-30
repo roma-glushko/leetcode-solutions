@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Solution:
+class TwoSum:
     """
     Problem Link: https://leetcode.com/problems/two-sum/
     """
