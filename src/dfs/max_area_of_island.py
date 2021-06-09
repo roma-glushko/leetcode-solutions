@@ -4,6 +4,7 @@ from typing import List, Set
 class MaxAreaOfIsland:
     """
     Problem Link: https://leetcode.com/problems/max-area-of-island/
+    Complexity: Medium
     """
 
     water_type: int = 0

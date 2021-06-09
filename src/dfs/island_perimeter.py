@@ -3,7 +3,8 @@ from typing import List
 
 class Solution:
     """
-    Link: https://leetcode.com/problems/island-perimeter/
+    Problem Link: https://leetcode.com/problems/island-perimeter/
+    Complexity: Easy
     """
     def islandPerimeter(self, grid: List[List[int]]) -> int:
         height = len(grid)

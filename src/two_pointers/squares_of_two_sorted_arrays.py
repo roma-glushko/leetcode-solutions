@@ -4,6 +4,7 @@ from typing import List
 class SquaresOfTwoSortedArrays:
     """
     Problem Link: https://leetcode.com/problems/squares-of-a-sorted-array/
+    Complexity: Easy
     """
     def sortedSquares(self, nums: List[int]) -> List[int]:
         i, j = 0, len(nums) - 1

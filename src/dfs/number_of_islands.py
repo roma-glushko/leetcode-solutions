@@ -4,6 +4,7 @@ from typing import List, Set
 class NumberOfIslands:
     """
     Problem Link: https://leetcode.com/problems/number-of-islands/
+    Complexity: Medium
     """
     water_type: str = '0'
     land_type: str = '1'

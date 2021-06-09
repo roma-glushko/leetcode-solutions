@@ -7,6 +7,7 @@ class ListNode:
 class AddTwoNumbers:
     """
     Problem Link: https://leetcode.com/problems/add-two-numbers/
+    Complexity: Medium
     """
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         sumhead = sumdigit = ListNode()
