@@ -17,7 +17,7 @@ python scripts/generate_problem_list.py --solution_dir ./src --readme_path ./rea
 
 ## Problem List 
 
-In total, there are 17 problems solved. Find all of them below.
+In total, there are 18 problems solved. Find all of them below.
 
  ### Arrays 
 
@@ -39,6 +39,7 @@ In total, there are 17 problems solved. Find all of them below.
 
  ### Dynamic Programming 
 
+- [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/dynamic_programming/longest_consecutive_sequence.py)) 
 - [Best Time To Buy And Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/dynamic_programming/best_time_to_buy_and_sell_stock.py)) 
 - [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/dynamic_programming/climbing_stairs.py)) 
 
