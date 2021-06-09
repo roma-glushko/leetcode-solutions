@@ -29,7 +29,7 @@ In total, there are 17 problems solved. Find all of them below.
 
  ### Design 
 
-- [Lru Cache](https://leetcode.com/problems/lru-cache/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/design/lru_cache.py)) 
+- [LRU Cache](https://leetcode.com/problems/lru-cache/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/design/lru_cache.py)) 
 
  ### DFS 
 

@@ -36,7 +36,7 @@ def get_title_from_filename(solution_path: str) -> str:
         .replace(' Ii', ' II') \
         .replace('Dfs', 'DFS') \
         .replace('Bfs', 'BFS') \
-        .replace('Rlu', 'RLU') \
+        .replace('Lru', 'LRU') \
 
 
 def get_solution_link_on_github(solution_path: str) -> str:
