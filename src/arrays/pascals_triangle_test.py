@@ -3,7 +3,7 @@ from unittest import TestCase
 from .pascals_triangle import PascalsTriangle
 
 
-class PascalsTriangleTask(TestCase):
+class PascalsTriangleTest(TestCase):
 
     def test_base_case(self):
         solution = PascalsTriangle()

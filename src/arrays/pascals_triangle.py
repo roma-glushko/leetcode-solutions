@@ -4,6 +4,7 @@ from typing import List
 class PascalsTriangle:
     """
     Problem Link: https://leetcode.com/problems/pascals-triangle/
+    Complexity: Easy
     """
     def generate(self, num_rows: int) -> List[List[int]]:
         pascal_triangle: List[List[int]] = [[1]]

@@ -1,6 +1,7 @@
 class ReverseInteger:
     """
     Problem Link: https://leetcode.com/problems/reverse-integer/
+    Complexity: Easy
     """
     def reverse(self, x: int) -> int:
         resersed_x = 0

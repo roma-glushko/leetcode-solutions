@@ -4,6 +4,7 @@ from typing import List, Set
 class CourseSchedule:
     """
     Problem Link: https://leetcode.com/problems/course-schedule/
+    Complexity: Medium
     """
     validated_courses: Set = set()
     course_dependency_set: Set = set()

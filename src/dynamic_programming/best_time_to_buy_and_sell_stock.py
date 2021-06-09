@@ -4,6 +4,7 @@ from typing import List
 class BestTimeToBuyAndSellStock:
     """
     Problem Link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+    Complexity: Easy
     """
     def maxProfit(self, prices: List[int]) -> int:
         buy_price = prices[0]

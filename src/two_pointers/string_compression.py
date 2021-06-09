@@ -2,8 +2,10 @@ from typing import List
 
 
 class StringCompress:
-    # Problem Link: https://leetcode.com/problems/string-compression/
-
+    """
+    Problem Link: https://leetcode.com/problems/string-compression/
+    Complexity: Medium
+    """
     def compress(self, chars: List[str]) -> int:
         current_idx: int = 0
         write_idx: int = 0
