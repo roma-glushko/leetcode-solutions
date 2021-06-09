@@ -23,7 +23,7 @@ In total, there are 17 problems solved. Find all of them below.
 
 - [Pascals Triangle](https://leetcode.com/problems/pascals-triangle/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/arrays/pascals_triangle.py)) 
 
- ### Bfs 
+ ### BFS 
 
 - [Flood Fill](https://leetcode.com/problems/flood-fill/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/bfs/flood_fill.py)) 
 
@@ -31,7 +31,7 @@ In total, there are 17 problems solved. Find all of them below.
 
 - [Lru Cache](https://leetcode.com/problems/lru-cache/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/design/lru_cache.py)) 
 
- ### Dfs 
+ ### DFS 
 
 - [Island Perimeter]() ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/dfs/island_perimeter.py)) 
 - [Max Area Of Island](https://leetcode.com/problems/max-area-of-island/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/dfs/max_area_of_island.py)) 
@@ -56,7 +56,7 @@ In total, there are 17 problems solved. Find all of them below.
 
  ### Topological Sort 
 
-- [Course Schedule Ii](https://leetcode.com/problems/course-schedule-ii/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/topological_sort/course_schedule_ii.py)) 
+- [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/topological_sort/course_schedule_ii.py)) 
 - [Course Schedule](https://leetcode.com/problems/course-schedule/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/topological_sort/course_schedule.py)) 
 
  ### Two Pointers 

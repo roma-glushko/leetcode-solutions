@@ -3,7 +3,6 @@ import os
 import re
 from argparse import ArgumentParser
 from collections import defaultdict
-from functools import reduce
 from pathlib import Path
 from typing import List, Dict
 
@@ -33,9 +32,11 @@ def get_title_from_filename(solution_path: str) -> str:
     return solution_filename \
         .replace('.py', '') \
         .replace('_', ' ') \
-        .replace(' ii', ' II') \
-        .replace('rlu', ' RLU') \
-        .title()
+        .title() \
+        .replace(' Ii', ' II') \
+        .replace('Dfs', 'DFS') \
+        .replace('Bfs', 'BFS') \
+        .replace('Rlu', 'RLU') \
 
 
 def get_solution_link_on_github(solution_path: str) -> str:
