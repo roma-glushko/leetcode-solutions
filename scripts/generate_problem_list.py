@@ -113,6 +113,9 @@ def generate_section_markdown(solutions: Dict[str, List[Dict]]) -> str:
                 get_solution_link_on_github(solution['path'])
             )
 
+    markdown += '\n## Credits \n\n'
+    markdown += 'Challenged were solved with ❤️ by Roman Glushko](https://www.romaglushko.com/)'
+
     return markdown
 
 

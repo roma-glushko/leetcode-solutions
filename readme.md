@@ -66,3 +66,7 @@ In total, there are 18 problems solved. Find all of them below.
 - [Reverse String](https://leetcode.com/problems/reverse-string/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/two_pointers/reverse_string.py)) 
 - [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/two_pointers/merge_sorted_array.py)) 
 - [Squares Of Two Sorted Arrays](https://leetcode.com/problems/squares-of-a-sorted-array/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/two_pointers/squares_of_two_sorted_arrays.py)) 
+
+## Credits 
+
+Challenged were solved with ❤️ by Roman Glushko](https://www.romaglushko.com/)
