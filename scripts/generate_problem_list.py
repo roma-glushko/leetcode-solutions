@@ -114,7 +114,7 @@ def generate_section_markdown(solutions: Dict[str, List[Dict]]) -> str:
             )
 
     markdown += '\n## Credits \n\n'
-    markdown += 'Challenged were solved with ❤️ by Roman Glushko](https://www.romaglushko.com/)'
+    markdown += 'Challenged were solved with ❤️ by [Roman Glushko](https://www.romaglushko.com/)'
 
     return markdown
 

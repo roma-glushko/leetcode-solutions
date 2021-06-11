@@ -69,4 +69,4 @@ In total, there are 18 problems solved. Find all of them below.
 
 ## Credits 
 
-Challenged were solved with ❤️ by Roman Glushko](https://www.romaglushko.com/)
+Challenged were solved with ❤️ by [Roman Glushko](https://www.romaglushko.com/)
