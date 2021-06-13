@@ -17,7 +17,7 @@ python scripts/generate_problem_list.py --solution_dir ./src --readme_path ./rea
 
 ## Problem List 
 
-In total, there are 18 problems solved. Find all of them below.
+In total, there are 19 problems solved. Find all of them below.
 
  ### Arrays 
 
@@ -30,6 +30,7 @@ In total, there are 18 problems solved. Find all of them below.
  ### Design 
 
 - [LRU Cache](https://leetcode.com/problems/lru-cache/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/design/lru_cache.py)) 
+- [Min Stack](https://leetcode.com/problems/min-stack/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/design/min_stack.py)) 
 
  ### DFS 
 
