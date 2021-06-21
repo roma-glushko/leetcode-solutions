@@ -17,7 +17,7 @@ python scripts/generate_problem_list.py --solution_dir ./src --readme_path ./rea
 
 ## Problem List 
 
-In total, there are 19 problems solved. Find all of them below.
+In total, there are 24 problems solved. Find all of them below.
 
  ### Arrays 
 
@@ -27,10 +27,15 @@ In total, there are 19 problems solved. Find all of them below.
 
 - [Flood Fill](https://leetcode.com/problems/flood-fill/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/bfs/flood_fill.py)) 
 
+ ### Binary Search 
+
+- [Search In Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/binary_search/search_in_rotated_sorted_array.py)) 
+
  ### Design 
 
 - [LRU Cache](https://leetcode.com/problems/lru-cache/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/design/lru_cache.py)) 
 - [Min Stack](https://leetcode.com/problems/min-stack/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/design/min_stack.py)) 
+- [Design Inmemory Filesystem](https://leetcode.com/problems/design-in-memory-file-system/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/design/design_inmemory_filesystem.py)) 
 
  ### DFS 
 
@@ -40,6 +45,7 @@ In total, there are 19 problems solved. Find all of them below.
 
  ### Dynamic Programming 
 
+- [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/dynamic_programming/longest_common_subsequence.py)) 
 - [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/dynamic_programming/longest_consecutive_sequence.py)) 
 - [Best Time To Buy And Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/dynamic_programming/best_time_to_buy_and_sell_stock.py)) 
 - [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/dynamic_programming/climbing_stairs.py)) 
@@ -50,11 +56,16 @@ In total, there are 19 problems solved. Find all of them below.
 
  ### Linked List 
 
+- [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/linked_list/merge_k_sorted_lists.py)) 
 - [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/linked_list/add_two_numbers.py)) 
 
  ### Mathematics 
 
 - [Reverse Integer](https://leetcode.com/problems/reverse-integer/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/mathematics/reverse_integer.py)) 
+
+ ### Sorting 
+
+- [Sort An Array](https://leetcode.com/problems/sort-an-array/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/sorting/sort_an_array.py)) 
 
  ### Topological Sort 
 
