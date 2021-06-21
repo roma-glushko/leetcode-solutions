@@ -17,7 +17,7 @@ python scripts/generate_problem_list.py --solution_dir ./src --readme_path ./rea
 
 ## Problem List 
 
-In total, there are 24 problems solved. Find all of them below.
+In total, there are 29 problems solved. Find all of them below.
 
  ### Arrays 
 
@@ -71,6 +71,14 @@ In total, there are 24 problems solved. Find all of them below.
 
 - [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/topological_sort/course_schedule_ii.py)) 
 - [Course Schedule](https://leetcode.com/problems/course-schedule/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/topological_sort/course_schedule.py)) 
+
+ ### Tree 
+
+- [Minimum Depth Of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/minimum_depth_of_binary_tree.py)) 
+- [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/binary_tree_postorder_traversal.py)) 
+- [Maximum Depth Of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/maximum_depth_of_binary_tree.py)) 
+- [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/binary_tree_inorder_traversal.py)) 
+- [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/binary_tree_preorder_traversal.py)) 
 
  ### Two Pointers 
 
