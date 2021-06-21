@@ -17,7 +17,7 @@ python scripts/generate_problem_list.py --solution_dir ./src --readme_path ./rea
 
 ## Problem List 
 
-In total, there are 29 problems solved. Find all of them below.
+In total, there are 32 problems solved. Find all of them below.
 
  ### Arrays 
 
@@ -54,6 +54,10 @@ In total, there are 29 problems solved. Find all of them below.
 
 - [Two Sum](https://leetcode.com/problems/two-sum/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/hash_table/two_sum.py)) 
 
+ ### Heap 
+
+- [Kth Largest Element In An Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/heap/kth_largest_element_in_an_array.py)) 
+
  ### Linked List 
 
 - [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/linked_list/merge_k_sorted_lists.py)) 
@@ -66,6 +70,14 @@ In total, there are 29 problems solved. Find all of them below.
  ### Sorting 
 
 - [Sort An Array](https://leetcode.com/problems/sort-an-array/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/sorting/sort_an_array.py)) 
+
+ ### SQL 
+
+- [Duplicate Emails](https://leetcode.com/problems/duplicate-emails/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/sql/duplicate_emails.sql)) 
+
+ ### Stack 
+
+- [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/stack/valid_parentheses.py)) 
 
  ### Topological Sort 
 

@@ -8,20 +8,24 @@ from typing import List, Dict
 
 
 def get_list_of_solution_files(root_dir: str) -> List[str]:
-    solution_pattern: str = os.path.join(root_dir, '*', '*.py')
+    solution_patterns: List[str] = [
+        os.path.join(root_dir, '*', '*.py'),
+        os.path.join(root_dir, '*', '*.sql'),
+    ]
 
     solution_files: List[str] = []
 
-    for file_path in glob.glob(solution_pattern):
-        if 'test' in file_path:
-            # ignore tests
-            continue
+    for solution_pattern in solution_patterns:
+        for file_path in glob.glob(solution_pattern):
+            if 'test' in file_path:
+                # ignore tests
+                continue
 
-        if '__init__' in file_path:
-            # ignore module files
-            continue
+            if '__init__' in file_path:
+                # ignore module files
+                continue
 
-        solution_files.append(file_path)
+            solution_files.append(file_path)
 
     return solution_files
 
@@ -31,11 +35,13 @@ def get_title_from_filename(solution_path: str) -> str:
 
     return solution_filename \
         .replace('.py', '') \
+        .replace('.sql', '') \
         .replace('_', ' ') \
         .title() \
         .replace(' Ii', ' II') \
         .replace('Dfs', 'DFS') \
         .replace('Bfs', 'BFS') \
+        .replace('Sql', 'SQL') \
         .replace('Lru', 'LRU') \
 
 
