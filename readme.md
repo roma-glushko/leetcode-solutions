@@ -17,11 +17,15 @@ python scripts/generate_problem_list.py --solution_dir ./src --readme_path ./rea
 
 ## Problem List 
 
-In total, there are 32 problems solved. Find all of them below.
+In total, there are 36 problems solved. Find all of them below.
 
  ### Arrays 
 
 - [Pascals Triangle](https://leetcode.com/problems/pascals-triangle/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/arrays/pascals_triangle.py)) 
+
+ ### Backtracking 
+
+- [Restore Ip Addresses](https://leetcode.com/problems/restore-ip-addresses/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/backtracking/restore_ip_addresses.py)) 
 
  ### BFS 
 
@@ -30,10 +34,12 @@ In total, there are 32 problems solved. Find all of them below.
  ### Binary Search 
 
 - [Search In Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/binary_search/search_in_rotated_sorted_array.py)) 
+- [Median Of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/binary_search/median_of_two_sorted_arrays.py)) 
 
  ### Design 
 
 - [LRU Cache](https://leetcode.com/problems/lru-cache/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/design/lru_cache.py)) 
+- [Design Parking System](https://leetcode.com/problems/design-parking-system/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/design/design_parking_system.py)) 
 - [Min Stack](https://leetcode.com/problems/min-stack/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/design/min_stack.py)) 
 - [Design Inmemory Filesystem](https://leetcode.com/problems/design-in-memory-file-system/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/design/design_inmemory_filesystem.py)) 
 
@@ -62,6 +68,7 @@ In total, there are 32 problems solved. Find all of them below.
 
 - [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/linked_list/merge_k_sorted_lists.py)) 
 - [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/linked_list/add_two_numbers.py)) 
+- [Middle Of The Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/linked_list/middle_of_the_linked_list.py)) 
 
  ### Mathematics 
 
