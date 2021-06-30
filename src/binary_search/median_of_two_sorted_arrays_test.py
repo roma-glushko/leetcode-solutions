@@ -9,12 +9,21 @@ class MedianOfTwoSortedArraysTest(TestCase):
         solution = MedianOfTwoSortedArrays()
 
         self.assertAlmostEqual(
+            11,
+            solution.findMedianSortedArrays(
+                [1, 3, 8, 9, 15],
+                [7, 11, 18, 19, 21, 25],
+            )
+        )
+
+        self.assertAlmostEqual(
             2.0,
             solution.findMedianSortedArrays(
                 [1, 3],
                 [2],
             )
         )
+
         self.assertAlmostEqual(
             2.5,
             solution.findMedianSortedArrays(
@@ -50,5 +59,32 @@ class MedianOfTwoSortedArraysTest(TestCase):
             solution.findMedianSortedArrays(
                 [2],
                 [],
+            )
+        )
+
+        self.assertAlmostEqual(
+            1.5,
+            solution.findMedianSortedArrays(
+                [1, 2],
+                [],
+            )
+        )
+
+        self.assertAlmostEqual(
+            2,
+            solution.findMedianSortedArrays(
+                [],
+                [1, 2, 3],
+            )
+        )
+
+    def test_negative_numbers(self):
+        solution = MedianOfTwoSortedArrays()
+
+        self.assertAlmostEqual(
+            -1,
+            solution.findMedianSortedArrays(
+                [3],
+                [-2, -1],
             )
         )
