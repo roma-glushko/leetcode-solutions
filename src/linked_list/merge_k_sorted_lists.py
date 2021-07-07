@@ -18,7 +18,7 @@ class MergeKSortedLists:
             Runtime: O(2p*log(p)), Memory: O(p)
         - Merge lists in a merge sort manner: get every two lists merged and then proceed merging newly created lists
             until there is only one list that consists of all elements
-            Runtime: O(n*log(k)), Memory: O(1)?
+            Runtime: O(n*log(k)), Memory: O(k)
     """
     def mergeKLists(self, lists: List[ListNode]) -> ListNode:
         if not lists:

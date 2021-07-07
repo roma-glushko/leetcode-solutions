@@ -17,10 +17,11 @@ python scripts/generate_problem_list.py --solution_dir ./src --readme_path ./rea
 
 ## Problem List 
 
-In total, there are 36 problems solved. Find all of them below.
+In total, there are 42 problems solved. Find all of them below.
 
  ### Arrays 
 
+- [Product Of The Last K Numbers](https://leetcode.com/problems/product-of-the-last-k-numbers/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/arrays/product_of_the_last_k_numbers.py)) 
 - [Pascals Triangle](https://leetcode.com/problems/pascals-triangle/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/arrays/pascals_triangle.py)) 
 
  ### Backtracking 
@@ -58,15 +59,18 @@ In total, there are 36 problems solved. Find all of them below.
 
  ### Hash Table 
 
+- [Three Sum](https://leetcode.com/problems/3sum/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/hash_table/three_sum.py)) 
 - [Two Sum](https://leetcode.com/problems/two-sum/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/hash_table/two_sum.py)) 
 
  ### Heap 
 
 - [Kth Largest Element In An Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/heap/kth_largest_element_in_an_array.py)) 
+- [Find Median From Data Stream]() ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/heap/find_median_from_data_stream.py)) 
 
  ### Linked List 
 
 - [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/linked_list/merge_k_sorted_lists.py)) 
+- [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/linked_list/merge_two_sorted_lists.py)) 
 - [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/linked_list/add_two_numbers.py)) 
 - [Middle Of The Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/linked_list/middle_of_the_linked_list.py)) 
 
@@ -93,9 +97,11 @@ In total, there are 36 problems solved. Find all of them below.
 
  ### Tree 
 
+- [Path Sum](https://leetcode.com/problems/path-sum/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/path_sum.py)) 
 - [Minimum Depth Of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/minimum_depth_of_binary_tree.py)) 
 - [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/binary_tree_postorder_traversal.py)) 
 - [Maximum Depth Of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/maximum_depth_of_binary_tree.py)) 
+- [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/symmetric_tree.py)) 
 - [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/binary_tree_inorder_traversal.py)) 
 - [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/binary_tree_preorder_traversal.py)) 
 

@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Tuple, Optional
 
 
 class TwoSum:
@@ -6,7 +6,7 @@ class TwoSum:
     Problem Link: https://leetcode.com/problems/two-sum/
     Complexity: Easy
     """
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def twoSum(self, nums: List[int], target: int) -> Tuple[int, int]:
         available_numbers = {num: idx for idx, num in enumerate(nums)}
 
         for idx, num in enumerate(nums):
@@ -17,4 +17,4 @@ class TwoSum:
 
                 return idx, remaining_idx
 
-        return ()
+        return 0, 0

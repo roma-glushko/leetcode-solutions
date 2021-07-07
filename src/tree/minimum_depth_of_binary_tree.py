@@ -1,5 +1,4 @@
 import math
-import sys
 
 from src.tree import TreeNode
 
