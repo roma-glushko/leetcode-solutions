@@ -17,7 +17,7 @@ python scripts/generate_problem_list.py --solution_dir ./src --readme_path ./rea
 
 ## Problem List 
 
-In total, there are 42 problems solved. Find all of them below.
+In total, there are 43 problems solved. Find all of them below.
 
  ### Arrays 
 
@@ -56,6 +56,7 @@ In total, there are 42 problems solved. Find all of them below.
 - [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/dynamic_programming/longest_consecutive_sequence.py)) 
 - [Best Time To Buy And Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/dynamic_programming/best_time_to_buy_and_sell_stock.py)) 
 - [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/dynamic_programming/climbing_stairs.py)) 
+- [Counting Bits](https://leetcode.com/problems/counting-bits/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/dynamic_programming/counting_bits.py)) 
 
  ### Hash Table 
 
@@ -65,7 +66,7 @@ In total, there are 42 problems solved. Find all of them below.
  ### Heap 
 
 - [Kth Largest Element In An Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/heap/kth_largest_element_in_an_array.py)) 
-- [Find Median From Data Stream]() ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/heap/find_median_from_data_stream.py)) 
+- [Find Median From Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/heap/find_median_from_data_stream.py)) 
 
  ### Linked List 
 
