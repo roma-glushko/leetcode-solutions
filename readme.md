@@ -17,7 +17,7 @@ python scripts/generate_problem_list.py --solution_dir ./src --readme_path ./rea
 
 ## Problem List 
 
-In total, there are 45 problems solved. Find all of them below.
+In total, there are 50 problems solved. Find all of them below.
 
  ### Arrays 
 
@@ -35,6 +35,7 @@ In total, there are 45 problems solved. Find all of them below.
  ### Binary Search 
 
 - [Search In Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/binary_search/search_in_rotated_sorted_array.py)) 
+- [Binary Search](https://leetcode.com/problems/binary-search/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/binary_search/binary_search.py)) 
 - [Median Of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/binary_search/median_of_two_sorted_arrays.py)) 
 
  ### Design 
@@ -56,6 +57,7 @@ In total, there are 45 problems solved. Find all of them below.
 - [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/dynamic_programming/longest_consecutive_sequence.py)) 
 - [Best Time To Buy And Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/dynamic_programming/best_time_to_buy_and_sell_stock.py)) 
 - [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/dynamic_programming/climbing_stairs.py)) 
+- [Word Break](https://leetcode.com/problems/word-break/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/dynamic_programming/word_break.py)) 
 - [Counting Bits](https://leetcode.com/problems/counting-bits/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/dynamic_programming/counting_bits.py)) 
 
  ### Hash Table 
@@ -78,11 +80,13 @@ In total, there are 45 problems solved. Find all of them below.
 
  ### Mathematics 
 
+- [Pow](https://leetcode.com/problems/powx-n/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/mathematics/pow.py)) 
 - [Reverse Integer](https://leetcode.com/problems/reverse-integer/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/mathematics/reverse_integer.py)) 
 
  ### Sorting 
 
 - [Sort An Array](https://leetcode.com/problems/sort-an-array/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/sorting/sort_an_array.py)) 
+- [Sort Colors](https://leetcode.com/problems/sort-colors/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/sorting/sort_colors.py)) 
 
  ### SQL 
 
@@ -103,6 +107,7 @@ In total, there are 45 problems solved. Find all of them below.
 - [Minimum Depth Of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/minimum_depth_of_binary_tree.py)) 
 - [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/binary_tree_postorder_traversal.py)) 
 - [Maximum Depth Of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/maximum_depth_of_binary_tree.py)) 
+- [Search In A Binary Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/search_in_a_binary_tree.py)) 
 - [Construct String From Binary Tree](https://leetcode.com/problems/construct-string-from-binary-tree/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/construct_string_from_binary_tree.py)) 
 - [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/symmetric_tree.py)) 
 - [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/binary_tree_inorder_traversal.py)) 
