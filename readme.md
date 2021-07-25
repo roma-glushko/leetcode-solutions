@@ -17,7 +17,7 @@ python scripts/generate_problem_list.py --solution_dir ./src --readme_path ./rea
 
 ## Problem List 
 
-In total, there are 43 problems solved. Find all of them below.
+In total, there are 44 problems solved. Find all of them below.
 
  ### Arrays 
 
@@ -61,6 +61,7 @@ In total, there are 43 problems solved. Find all of them below.
  ### Hash Table 
 
 - [Three Sum](https://leetcode.com/problems/3sum/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/hash_table/three_sum.py)) 
+- [Find All Duplicates In An Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/hash_table/find_all_duplicates_in_an_array.py)) 
 - [Two Sum](https://leetcode.com/problems/two-sum/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/hash_table/two_sum.py)) 
 
  ### Heap 
