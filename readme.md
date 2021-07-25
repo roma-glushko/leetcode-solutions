@@ -17,7 +17,7 @@ python scripts/generate_problem_list.py --solution_dir ./src --readme_path ./rea
 
 ## Problem List 
 
-In total, there are 44 problems solved. Find all of them below.
+In total, there are 45 problems solved. Find all of them below.
 
  ### Arrays 
 
@@ -103,6 +103,7 @@ In total, there are 44 problems solved. Find all of them below.
 - [Minimum Depth Of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/minimum_depth_of_binary_tree.py)) 
 - [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/binary_tree_postorder_traversal.py)) 
 - [Maximum Depth Of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/maximum_depth_of_binary_tree.py)) 
+- [Construct String From Binary Tree](https://leetcode.com/problems/construct-string-from-binary-tree/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/construct_string_from_binary_tree.py)) 
 - [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/symmetric_tree.py)) 
 - [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/binary_tree_inorder_traversal.py)) 
 - [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/binary_tree_preorder_traversal.py)) 
