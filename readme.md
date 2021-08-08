@@ -17,7 +17,7 @@ python scripts/generate_problem_list.py --solution_dir ./src --readme_path ./rea
 
 ## Problem List 
 
-In total, there are 50 problems solved. Find all of them below.
+In total, there are 53 problems solved. Find all of them below.
 
  ### Arrays 
 
@@ -26,6 +26,7 @@ In total, there are 50 problems solved. Find all of them below.
 
  ### Backtracking 
 
+- [Word Search](https://leetcode.com/problems/word-search/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/backtracking/word_search.py)) 
 - [Restore Ip Addresses](https://leetcode.com/problems/restore-ip-addresses/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/backtracking/restore_ip_addresses.py)) 
 
  ### BFS 
@@ -59,6 +60,10 @@ In total, there are 50 problems solved. Find all of them below.
 - [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/dynamic_programming/climbing_stairs.py)) 
 - [Word Break](https://leetcode.com/problems/word-break/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/dynamic_programming/word_break.py)) 
 - [Counting Bits](https://leetcode.com/problems/counting-bits/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/dynamic_programming/counting_bits.py)) 
+
+ ### Greedy 
+
+- [Jump Game II](https://leetcode.com/problems/jump-game-ii/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/greedy/jump_game_ii.py)) 
 
  ### Hash Table 
 
@@ -106,6 +111,7 @@ In total, there are 50 problems solved. Find all of them below.
 - [Path Sum](https://leetcode.com/problems/path-sum/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/path_sum.py)) 
 - [Minimum Depth Of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/minimum_depth_of_binary_tree.py)) 
 - [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/binary_tree_postorder_traversal.py)) 
+- [Same Tree](https://leetcode.com/problems/same-tree/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/same_tree.py)) 
 - [Maximum Depth Of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/maximum_depth_of_binary_tree.py)) 
 - [Search In A Binary Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/search_in_a_binary_tree.py)) 
 - [Construct String From Binary Tree](https://leetcode.com/problems/construct-string-from-binary-tree/) ([Solution](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/tree/construct_string_from_binary_tree.py)) 
