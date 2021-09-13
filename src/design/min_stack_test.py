@@ -4,7 +4,6 @@ from .min_stack import MinStack
 
 
 class MinStackTest(TestCase):
-
     def test_default_input(self):
         min_stack = MinStack()
 

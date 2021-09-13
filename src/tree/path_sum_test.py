@@ -1,7 +1,9 @@
 from unittest import TestCase
 
 from src.tree import TreeNode
+
 from .path_sum import PathSum
+
 
 class PathSumTest(TestCase):
     """
@@ -9,6 +11,7 @@ class PathSumTest(TestCase):
     Complexity: Easy
 
     """
+
     def test_positive_input(self):
         solution = PathSum()
 
@@ -16,10 +19,14 @@ class PathSumTest(TestCase):
             solution.hasPathSum(
                 TreeNode(
                     5,
-                    left=TreeNode(4, left=TreeNode(11, left=TreeNode(7), right=TreeNode(2))),
-                    right=TreeNode(8, left=TreeNode(13), right=TreeNode(4, right=TreeNode(1)))
+                    left=TreeNode(
+                        4, left=TreeNode(11, left=TreeNode(7), right=TreeNode(2))
+                    ),
+                    right=TreeNode(
+                        8, left=TreeNode(13), right=TreeNode(4, right=TreeNode(1))
+                    ),
                 ),
-                22
+                22,
             ),
         )
 
@@ -28,11 +35,7 @@ class PathSumTest(TestCase):
 
         self.assertFalse(
             solution.hasPathSum(
-                TreeNode(
-                    1,
-                    left=TreeNode(2),
-                    right=TreeNode(3)
-                ),
+                TreeNode(1, left=TreeNode(2), right=TreeNode(3)),
                 5,
             ),
         )
@@ -52,10 +55,7 @@ class PathSumTest(TestCase):
 
         self.assertTrue(
             solution.hasPathSum(
-                TreeNode(
-                    -2,
-                    right=TreeNode(-3)
-                ),
+                TreeNode(-2, right=TreeNode(-3)),
                 -5,
             ),
         )

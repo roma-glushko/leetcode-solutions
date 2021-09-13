@@ -1,5 +1,4 @@
-from collections import Counter
-from typing import List, Set
+from typing import List
 
 
 class ThreeSum:
@@ -10,6 +9,7 @@ class ThreeSum:
     Runtime: 3352ms
     Memory: 17MB
     """
+
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         num_len: int = len(nums)
         if num_len == 0:

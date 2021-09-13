@@ -4,7 +4,6 @@ from .string_compression import StringCompress
 
 
 class StringCompressTest(TestCase):
-
     def test_three_chars(self):
         solution = StringCompress()
 
@@ -14,7 +13,7 @@ class StringCompressTest(TestCase):
 
         length: int = solution.compress(string)
 
-        self.assertEqual(expected_result, string[0: length])
+        self.assertEqual(expected_result, string[0:length])
         self.assertEqual(expected_len, length)
 
     def test_one_chars(self):
@@ -31,8 +30,8 @@ class StringCompressTest(TestCase):
     def test_two_the_same_chars(self):
         solution = StringCompress()
 
-        string = ['a', 'a']
-        expected_result = ['a', '2']
+        string = ["a", "a"]
+        expected_result = ["a", "2"]
 
         length: int = solution.compress(string)
 
@@ -43,19 +42,94 @@ class StringCompressTest(TestCase):
         solution = StringCompress()
 
         string = [
-            'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W',
-            'B',
-            'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W',
-            'B', 'B', 'B',
-            'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W',
-            'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W',
-            'B',
-            'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W',
-            'W', 'W',
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "B",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "B",
+            "B",
+            "B",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "B",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
         ]
-        expected_result = ['W', '1', '2', 'B', 'W', '1', '2', 'B', '3', 'W', '2', '4', 'B', 'W', '1', '4']
+        expected_result = [
+            "W",
+            "1",
+            "2",
+            "B",
+            "W",
+            "1",
+            "2",
+            "B",
+            "3",
+            "W",
+            "2",
+            "4",
+            "B",
+            "W",
+            "1",
+            "4",
+        ]
 
         length: int = solution.compress(string)
 
-        self.assertEqual(expected_result, string[0: length])
+        self.assertEqual(expected_result, string[0:length])
         self.assertEqual(len(expected_result), length)

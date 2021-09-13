@@ -4,7 +4,6 @@ from .lru_cache import LRUCache
 
 
 class LRUCacheTest(TestCase):
-
     def test_default_input(self):
         cache = LRUCache(2)
 
@@ -217,5 +216,13 @@ class LRUCacheTest(TestCase):
 
         self.assertEqual(cache.get(1), 20)
 
-        for (key, value) in [[2, 2], [7, 4], [4, 22], [7, 24], [9, 26], [13, 28], [11, 26]]:
+        for (key, value) in [
+            [2, 2],
+            [7, 4],
+            [4, 22],
+            [7, 24],
+            [9, 26],
+            [13, 28],
+            [11, 26],
+        ]:
             cache.put(key, value)

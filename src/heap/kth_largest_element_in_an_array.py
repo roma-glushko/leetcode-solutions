@@ -1,5 +1,5 @@
-from typing import List
 from heapq import heappush, heappushpop
+from typing import List
 
 
 class KthLargestElementInAnArray:
@@ -9,6 +9,7 @@ class KthLargestElementInAnArray:
     Runtime: 64ms
     Memory: 15MB
     """
+
     def findKthLargest(self, nums: List[int], k: int) -> int:
         k_largest_elements: List[int] = []
 
@@ -25,5 +26,3 @@ class KthLargestElementInAnArray:
             heappushpop(k_largest_elements, element)
 
         return k_largest_elements[0]
-
-

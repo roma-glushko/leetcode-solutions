@@ -4,7 +4,6 @@ from .merge_sorted_array import MergeSortedArray
 
 
 class MergeSortedArrayTest(TestCase):
-
     def test_two_arrays(self):
         solution = MergeSortedArray()
 

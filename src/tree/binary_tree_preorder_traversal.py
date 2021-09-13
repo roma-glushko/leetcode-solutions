@@ -10,6 +10,7 @@ class BinaryTreePreorderTraversal:
     Runtime: 28ms
     Memory: 14.2MB
     """
+
     def preorderTraversal(self, root: TreeNode) -> List[int]:
         if not root:
             return []

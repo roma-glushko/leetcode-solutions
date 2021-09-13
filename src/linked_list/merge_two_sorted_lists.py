@@ -1,4 +1,3 @@
-
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -12,6 +11,7 @@ class MergeTwoSortedLists:
     Runtime: 24ms
     Memory: 14.4MB
     """
+
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
         merged_list_head = current_head = ListNode(0)
 

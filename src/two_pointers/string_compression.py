@@ -6,6 +6,7 @@ class StringCompress:
     Problem Link: https://leetcode.com/problems/string-compression/
     Complexity: Medium
     """
+
     def compress(self, chars: List[str]) -> int:
         current_idx: int = 0
         write_idx: int = 0
@@ -14,7 +15,9 @@ class StringCompress:
         while current_idx < length:
             sequence_start_idx: int = current_idx
 
-            while current_idx < length and chars[current_idx] == chars[sequence_start_idx]:
+            while (
+                current_idx < length and chars[current_idx] == chars[sequence_start_idx]
+            ):
                 # try to reach the end of the sequence group explicitly
                 current_idx += 1
 

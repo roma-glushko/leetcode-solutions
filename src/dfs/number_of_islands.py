@@ -6,8 +6,9 @@ class NumberOfIslands:
     Problem Link: https://leetcode.com/problems/number-of-islands/
     Complexity: Medium
     """
-    water_type: str = '0'
-    land_type: str = '1'
+
+    water_type: str = "0"
+    land_type: str = "1"
 
     def get_land_id(self, row_idx: int, col_idx: int) -> str:
         return "{}:{}".format(row_idx, col_idx)
@@ -31,7 +32,10 @@ class NumberOfIslands:
                 # top cell
                 explore_island(row_idx - 1, col_idx)
 
-            if row_idx + 1 < grid_height and grid[row_idx + 1][col_idx] == self.land_type:
+            if (
+                row_idx + 1 < grid_height
+                and grid[row_idx + 1][col_idx] == self.land_type
+            ):
                 # bottom cell
                 explore_island(row_idx + 1, col_idx)
 
@@ -39,7 +43,10 @@ class NumberOfIslands:
                 # left cell
                 explore_island(row_idx, col_idx - 1)
 
-            if col_idx + 1 < grid_width and grid[row_idx][col_idx + 1] == self.land_type:
+            if (
+                col_idx + 1 < grid_width
+                and grid[row_idx][col_idx + 1] == self.land_type
+            ):
                 # right cell
                 explore_island(row_idx, col_idx + 1)
 

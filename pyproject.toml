@@ -6,9 +6,13 @@ authors = ["Roman Glushko <roman.glushko.m@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = ">=3.8"
+python = ">=3.8,<4.0"
 
 [tool.poetry.dev-dependencies]
+flake8 = "^3.9.2"
+isort = "^5.9.3"
+black = "^21.8b0"
+mypy = "^0.910"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

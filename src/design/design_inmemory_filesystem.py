@@ -2,7 +2,7 @@ from typing import Dict
 
 
 class FSObject:
-    name: str = ''
+    name: str = ""
 
     def __init__(self, name: str):
         self.name = name
@@ -25,9 +25,6 @@ class FileSystem:
     """
 
     filesystem_map: Dict[str, FSObject]
-
-    def __init__(self):
-        filesystem_map = {}
 
     def ls(self, path: str):
         pass

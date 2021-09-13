@@ -1,4 +1,4 @@
-from typing import List, Set
+from typing import List
 
 
 class CourseScheduleII:
@@ -21,7 +21,7 @@ class CourseScheduleII:
 
         if self.course_status[course_idx] == self.course_in_planning:
             # loop has been detected
-            raise ValueError('Requirement loop has been detected')
+            raise ValueError("Requirement loop has been detected")
 
         self.course_status[course_idx] = self.course_in_planning
 
@@ -29,7 +29,9 @@ class CourseScheduleII:
 
         for required_course_idx in course_requirements:
             course_schedule.extend(
-                self.plan_course(required_course_idx, self.course_requirements[required_course_idx])
+                self.plan_course(
+                    required_course_idx, self.course_requirements[required_course_idx]
+                )
             )
 
         course_schedule.append(course_idx)
@@ -47,10 +49,8 @@ class CourseScheduleII:
 
         for course_idx, requirements in enumerate(self.course_requirements):
             try:
-                self.course_schedule.extend(
-                    self.plan_course(course_idx, requirements)
-                )
-            except:
+                self.course_schedule.extend(self.plan_course(course_idx, requirements))
+            except:  # noqa
                 # requirement loop presents in the schedule
                 return []
 

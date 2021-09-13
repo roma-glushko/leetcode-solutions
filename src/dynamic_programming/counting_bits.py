@@ -6,6 +6,7 @@ class CountingBits:
     Problem Link: https://leetcode.com/problems/counting-bits/
     Complexity: Easy
     """
+
     def countBits(self, n: int) -> List[int]:
         if n == 0:
             return [0]

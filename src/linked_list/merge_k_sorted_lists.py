@@ -20,6 +20,7 @@ class MergeKSortedLists:
             until there is only one list that consists of all elements
             Runtime: O(n*log(k)), Memory: O(k)
     """
+
     def mergeKLists(self, lists: List[ListNode]) -> ListNode:
         if not lists:
             return None

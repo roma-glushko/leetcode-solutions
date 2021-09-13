@@ -4,7 +4,6 @@ from .median_of_two_sorted_arrays import MedianOfTwoSortedArrays
 
 
 class MedianOfTwoSortedArraysTest(TestCase):
-
     def test_default_input(self):
         solution = MedianOfTwoSortedArrays()
 
@@ -13,7 +12,7 @@ class MedianOfTwoSortedArraysTest(TestCase):
             solution.findMedianSortedArrays(
                 [1, 3, 8, 9, 15],
                 [7, 11, 18, 19, 21, 25],
-            )
+            ),
         )
 
         self.assertAlmostEqual(
@@ -21,7 +20,7 @@ class MedianOfTwoSortedArraysTest(TestCase):
             solution.findMedianSortedArrays(
                 [1, 3],
                 [2],
-            )
+            ),
         )
 
         self.assertAlmostEqual(
@@ -29,7 +28,7 @@ class MedianOfTwoSortedArraysTest(TestCase):
             solution.findMedianSortedArrays(
                 [1, 2],
                 [3, 4],
-            )
+            ),
         )
 
     def test_zero_arrays(self):
@@ -40,7 +39,7 @@ class MedianOfTwoSortedArraysTest(TestCase):
             solution.findMedianSortedArrays(
                 [0, 0],
                 [0, 0],
-            )
+            ),
         )
 
     def test_empty_arrays(self):
@@ -51,7 +50,7 @@ class MedianOfTwoSortedArraysTest(TestCase):
             solution.findMedianSortedArrays(
                 [],
                 [1],
-            )
+            ),
         )
 
         self.assertAlmostEqual(
@@ -59,7 +58,7 @@ class MedianOfTwoSortedArraysTest(TestCase):
             solution.findMedianSortedArrays(
                 [2],
                 [],
-            )
+            ),
         )
 
         self.assertAlmostEqual(
@@ -67,7 +66,7 @@ class MedianOfTwoSortedArraysTest(TestCase):
             solution.findMedianSortedArrays(
                 [1, 2],
                 [],
-            )
+            ),
         )
 
         self.assertAlmostEqual(
@@ -75,7 +74,7 @@ class MedianOfTwoSortedArraysTest(TestCase):
             solution.findMedianSortedArrays(
                 [],
                 [1, 2, 3],
-            )
+            ),
         )
 
     def test_negative_numbers(self):
@@ -86,5 +85,5 @@ class MedianOfTwoSortedArraysTest(TestCase):
             solution.findMedianSortedArrays(
                 [3],
                 [-2, -1],
-            )
+            ),
         )

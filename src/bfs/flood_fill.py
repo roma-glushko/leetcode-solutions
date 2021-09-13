@@ -6,7 +6,10 @@ class FloodFill:
     Problem Link: https://leetcode.com/problems/flood-fill/
     Complexity: Easy
     """
-    def floodFill(self, image: List[List[int]], sr: int, sc: int, new_color: int) -> List[List[int]]:
+
+    def floodFill(
+        self, image: List[List[int]], sr: int, sc: int, new_color: int
+    ) -> List[List[int]]:
         old_color = image[sr][sc]
 
         if old_color == new_color:

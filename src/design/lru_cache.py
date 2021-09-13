@@ -19,6 +19,7 @@ class LinkedList:
     """
     Linked List. Represents usage history of cache items
     """
+
     head: Optional[Node] = None
     tail: Optional[Node] = None
 
@@ -74,6 +75,7 @@ class LRUCache:
     Runtime: 1008 ms
     Memory: 74.1MB
     """
+
     capacity: int
     cache_map: Dict[int, Node]
     history: LinkedList
@@ -145,6 +147,7 @@ class LRUCache2:
     Runtime: 740 ms
     Memory: 73.9 MB
     """
+
     capacity: int
     cache_map: OrderedDict
 

@@ -1,4 +1,4 @@
-from typing import List, Dict, Tuple
+from typing import Dict, List, Tuple
 
 
 class ValidParentheses:
@@ -9,11 +9,12 @@ class ValidParentheses:
     Runtime: 28ms
     Memory: 14.5MB
     """
-    openings: Tuple[str] = ('(', '[', '{')
+
+    openings: Tuple[str] = ("(", "[", "{")
     closing_map: Dict[str, str] = {
-        ')': '(',
-        ']': '[',
-        '}': '{',
+        ")": "(",
+        "]": "[",
+        "}": "{",
     }
 
     def isValid(self, s: str) -> bool:
@@ -25,9 +26,14 @@ class ValidParentheses:
                 parentheses_stack.append(parentheses)
                 continue
 
-            last_parentheses: str = parentheses_stack[-1] if len(parentheses_stack) else ''
+            last_parentheses: str = (
+                parentheses_stack[-1] if len(parentheses_stack) else ""
+            )
 
-            if parentheses in self.closing_map and self.closing_map[parentheses] == last_parentheses:
+            if (
+                parentheses in self.closing_map
+                and self.closing_map[parentheses] == last_parentheses
+            ):
                 # parentheses are matched, let remove this pair
                 del parentheses_stack[-1]
                 continue

@@ -4,7 +4,6 @@ from .longest_consecutive_sequence import LongestConsecutiveSequence
 
 
 class LongestConsecutiveSequenceTest(TestCase):
-
     def test_four_input(self):
         solution = LongestConsecutiveSequence()
 

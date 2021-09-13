@@ -9,6 +9,7 @@ class ProductOfTheLastKNumbers:
     Runtime: 272ms
     Memory: 29.6MB
     """
+
     def __init__(self):
         self.number_sequence: List[int] = []
 
@@ -33,4 +34,4 @@ class ProductOfTheLastKNumbers:
         if k == sequence_len:
             return self.number_sequence[-1]
 
-        return self.number_sequence[-1] // self.number_sequence[-k-1]
+        return self.number_sequence[-1] // self.number_sequence[-k - 1]

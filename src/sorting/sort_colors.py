@@ -9,6 +9,7 @@ class SortColors:
     Runtime: 32ms
     Memory: 14.4MB
     """
+
     def sortColors(self, nums: List[int]) -> None:
         """
         Do not return anything, modify nums in-place instead.

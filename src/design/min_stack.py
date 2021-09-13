@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import Dict, List
 
 
 class MinStack:
@@ -6,6 +6,7 @@ class MinStack:
     Problem Link: https://leetcode.com/problems/min-stack/
     Complexity: Easy
     """
+
     def __init__(self):
         self.stack: List[Dict] = []
 
@@ -15,18 +16,20 @@ class MinStack:
         min_value: int = val
 
         if len(self.stack) > 0:
-            min_value = min(self.stack[-1]['min'], min_value)
+            min_value = min(self.stack[-1]["min"], min_value)
 
-        self.stack.append({
-            'value': val,
-            'min': min_value,
-        })
+        self.stack.append(
+            {
+                "value": val,
+                "min": min_value,
+            }
+        )
 
     def pop(self) -> None:
         del self.stack[-1]
 
     def top(self) -> int:
-        return self.stack[-1]['value']
+        return self.stack[-1]["value"]
 
     def getMin(self) -> int:
-        return self.stack[-1]['min']
+        return self.stack[-1]["min"]

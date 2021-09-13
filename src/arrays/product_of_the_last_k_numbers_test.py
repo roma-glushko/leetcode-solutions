@@ -4,7 +4,6 @@ from .product_of_the_last_k_numbers import ProductOfTheLastKNumbers
 
 
 class ProductOfTheLastKNumbersTest(TestCase):
-
     def test_base_case(self):
         solution = ProductOfTheLastKNumbers()
 

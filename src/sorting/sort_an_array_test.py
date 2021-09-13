@@ -4,7 +4,6 @@ from .sort_an_array import SortAnArray
 
 
 class SortAnArrayTest(TestCase):
-
     def test_default_input(self):
         solution = SortAnArray()
 

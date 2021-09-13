@@ -3,6 +3,7 @@ class ClimbingStairs:
     Problem Link: https://leetcode.com/problems/climbing-stairs/
     Complexity: Easy
     """
+
     def climbStairs(self, n: int) -> int:
         steps = [0, 1, 2]
 

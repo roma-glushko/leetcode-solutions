@@ -4,7 +4,6 @@ from .pascals_triangle import PascalsTriangle
 
 
 class PascalsTriangleTest(TestCase):
-
     def test_base_case(self):
         solution = PascalsTriangle()
 

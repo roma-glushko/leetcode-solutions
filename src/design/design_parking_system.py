@@ -8,7 +8,8 @@ class DesignParkingSystem:
     Runtime: 132ms
     Memory: 14.9MB
     """
-    def __init__(self,  small: int, medium: int, big: int):
+
+    def __init__(self, small: int, medium: int, big: int):
         self.parking_space: List[int, int, int] = [small, medium, big]
 
     def addCar(self, car_type: int) -> bool:

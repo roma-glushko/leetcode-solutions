@@ -5,7 +5,6 @@ from .search_in_a_binary_tree import SearchInABinaryTree
 
 
 class SearchInABinaryTreeTest(TestCase):
-
     def test_existing_inputs(self):
         solution = SearchInABinaryTree()
 
@@ -19,8 +18,8 @@ class SearchInABinaryTreeTest(TestCase):
                     left=subtree,
                     right=TreeNode(7),
                 ),
-                2
-            )
+                2,
+            ),
         )
 
     def test_notfound_input(self):
@@ -34,6 +33,6 @@ class SearchInABinaryTreeTest(TestCase):
                     left=TreeNode(2, left=TreeNode(1), right=TreeNode(3)),
                     right=TreeNode(7),
                 ),
-                5
-            )
+                5,
+            ),
         )

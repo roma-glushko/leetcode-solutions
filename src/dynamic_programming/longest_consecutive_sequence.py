@@ -1,5 +1,5 @@
 from collections import defaultdict
-from typing import List, Dict
+from typing import Dict, List
 
 
 class LongestConsecutiveSequence:
@@ -7,6 +7,7 @@ class LongestConsecutiveSequence:
     Problem Link: https://leetcode.com/problems/longest-consecutive-sequence/
     Complexity: Medium
     """
+
     def longestConsecutive(self, nums: List[int]) -> int:
         """
         This solution is based on idea that steak for the current number num = 1 + steak(num - 1)

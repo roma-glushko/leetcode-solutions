@@ -16,7 +16,9 @@ class MinimumDepthOfBinaryTree:
 
         return min(
             self.get_min_depth(node.left, current_depth + 1) if node.left else math.inf,
-            self.get_min_depth(node.right, current_depth + 1) if node.right else math.inf,
+            self.get_min_depth(node.right, current_depth + 1)
+            if node.right
+            else math.inf,
         )
 
     def minDepth(self, root: TreeNode) -> int:

@@ -9,7 +9,8 @@ class ConstructStringFromBinaryTree:
     Runtime: 56ms
     Memory: 16.3MB
     """
-    empty_tree_str: str = '()'
+
+    empty_tree_str: str = "()"
 
     def is_empty(self, subtree_str: str):
         return subtree_str == self.empty_tree_str

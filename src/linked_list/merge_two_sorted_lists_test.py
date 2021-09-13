@@ -1,11 +1,10 @@
 from typing import List
 from unittest import TestCase
 
-from .merge_two_sorted_lists import MergeTwoSortedLists, ListNode
+from .merge_two_sorted_lists import ListNode, MergeTwoSortedLists
 
 
 class MergeTwoSortedListsTest(TestCase):
-
     def get_values_from_list(self, list_head: ListNode) -> List:
         list_values = []
         current_node = list_head

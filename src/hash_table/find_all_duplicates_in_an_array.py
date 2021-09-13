@@ -9,6 +9,7 @@ class FindAllDuplicatedInAnArray:
     Runtime: 316ms
     Memory: 23.4MB
     """
+
     def findDuplicates(self, nums: List[int]) -> List[int]:
         detected_numbers: Set = set()
         duplicated_numbers: List[int] = []

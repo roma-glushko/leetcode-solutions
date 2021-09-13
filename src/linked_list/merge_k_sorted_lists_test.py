@@ -1,11 +1,10 @@
 from typing import List
 from unittest import TestCase
 
-from .merge_k_sorted_lists import MergeKSortedLists, ListNode
+from .merge_k_sorted_lists import ListNode, MergeKSortedLists
 
 
 class MergeKSortedListsTest(TestCase):
-
     def get_values_from_list(self, list_head: ListNode) -> List:
         list_values = []
         current_node = list_head
@@ -34,4 +33,3 @@ class MergeKSortedListsTest(TestCase):
 
         self.assertEqual([], self.get_values_from_list(solution.mergeKLists([])))
         self.assertEqual([], self.get_values_from_list(solution.mergeKLists([[]])))
-

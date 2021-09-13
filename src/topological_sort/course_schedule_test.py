@@ -4,7 +4,6 @@ from .course_schedule import CourseSchedule
 
 
 class CourseScheduleTest(TestCase):
-
     def test_possible_schedule_with_two_courses(self):
         solution = CourseSchedule()
 

@@ -4,7 +4,6 @@ from .counting_bits import CountingBits
 
 
 class CountingBitsTest(TestCase):
-
     def test_default_inputs(self):
         solution = CountingBits()
 

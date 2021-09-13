@@ -13,6 +13,7 @@ class MiddleOfTheLinkedList:
     Runtime: 28ms
     Memory: 14.3MB
     """
+
     def middleNode(self, head: ListNode) -> ListNode:
         """
         Solution leverages an idea of fast and slow pointers.
@@ -27,4 +28,3 @@ class MiddleOfTheLinkedList:
             fast_pointer = fast_pointer.next.next
 
         return slow_pointer
-

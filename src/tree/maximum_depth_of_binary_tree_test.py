@@ -5,15 +5,18 @@ from .maximum_depth_of_binary_tree import MaximumDepthOfBinaryTree
 
 
 class MaximumDepthOfBinaryTreeTest(TestCase):
-
     def test_multiple_level_tree(self):
         solution = MaximumDepthOfBinaryTree()
 
         self.assertTrue(
             3,
             solution.maxDepth(
-                TreeNode(3, left=TreeNode(9), right=TreeNode(20, left=TreeNode(15), right=TreeNode(7)))
-            )
+                TreeNode(
+                    3,
+                    left=TreeNode(9),
+                    right=TreeNode(20, left=TreeNode(15), right=TreeNode(7)),
+                )
+            ),
         )
 
     def test_single_level_tree(self):
@@ -24,7 +27,4 @@ class MaximumDepthOfBinaryTreeTest(TestCase):
     def test_stumb_inputs(self):
         solution = MaximumDepthOfBinaryTree()
 
-        self.assertTrue(
-            1,
-            solution.maxDepth(TreeNode(0))
-        )
+        self.assertTrue(1, solution.maxDepth(TreeNode(0)))

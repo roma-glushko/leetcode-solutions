@@ -8,7 +8,15 @@ class WordSearch:
     Runtime: 6300ms
     Memory: 14.5MB
     """
-    def track_word(self, board: List[List[str]], row_idx: int, column_idx: int, word: str, visited_cells: Set) -> bool:
+
+    def track_word(
+        self,
+        board: List[List[str]],
+        row_idx: int,
+        column_idx: int,
+        word: str,
+        visited_cells: Set,
+    ) -> bool:
         if f"{row_idx}:{column_idx}" in visited_cells:
             return False
 
@@ -22,16 +30,24 @@ class WordSearch:
         word_was_found: bool = False
 
         if column_idx + 1 < column_nums and board[row_idx][column_idx + 1] == word[0]:
-            word_was_found = word_was_found or self.track_word(board, row_idx, column_idx + 1, word[1:], visited_cells)
+            word_was_found = word_was_found or self.track_word(
+                board, row_idx, column_idx + 1, word[1:], visited_cells
+            )
 
         if row_idx + 1 < row_nums and board[row_idx + 1][column_idx] == word[0]:
-            word_was_found = word_was_found or self.track_word(board, row_idx + 1, column_idx, word[1:], visited_cells)
+            word_was_found = word_was_found or self.track_word(
+                board, row_idx + 1, column_idx, word[1:], visited_cells
+            )
 
         if row_idx - 1 >= 0 and board[row_idx - 1][column_idx] == word[0]:
-            word_was_found = word_was_found or self.track_word(board, row_idx - 1, column_idx, word[1:], visited_cells)
+            word_was_found = word_was_found or self.track_word(
+                board, row_idx - 1, column_idx, word[1:], visited_cells
+            )
 
         if column_idx - 1 >= 0 and board[row_idx][column_idx - 1] == word[0]:
-            word_was_found = word_was_found or self.track_word(board, row_idx, column_idx - 1, word[1:], visited_cells)
+            word_was_found = word_was_found or self.track_word(
+                board, row_idx, column_idx - 1, word[1:], visited_cells
+            )
 
         visited_cells.remove(f"{row_idx}:{column_idx}")
 

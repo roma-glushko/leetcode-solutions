@@ -9,6 +9,7 @@ class BinarySearch:
     Runtime: 232ms
     Memory: 15.6MB
     """
+
     def search(self, nums: List[int], target: int) -> int:
         left_idx: int = 0
         right_idx: int = len(nums) - 1

@@ -8,11 +8,12 @@ class RestoreIPAddresses:
     Runtime: 32ms
     Memory: 14.2MB
     """
+
     def restoreIpAddresses(self, string: str) -> List[str]:
         ip_list: List[str] = []
 
         def is_valid_submask(submask: str) -> bool:
-            if len(submask) > 1 and submask.startswith('0'):
+            if len(submask) > 1 and submask.startswith("0"):
                 return False
 
             if int(submask) > 255:
@@ -21,7 +22,9 @@ class RestoreIPAddresses:
 
             return True
 
-        def search_ip_submask(ip_string: str, submask_start_idx: int, found_submasks: int) -> None:
+        def search_ip_submask(
+            ip_string: str, submask_start_idx: int, found_submasks: int
+        ) -> None:
             if found_submasks == 3:
                 # we start from 0 submask, so there 0..3 submasks
 
@@ -41,9 +44,9 @@ class RestoreIPAddresses:
                     return
 
                 search_ip_submask(
-                    ip_string[:submask_end_idx] + '.' + ip_string[submask_end_idx:],
+                    ip_string[:submask_end_idx] + "." + ip_string[submask_end_idx:],
                     submask_end_idx + 1,
-                    found_submasks + 1
+                    found_submasks + 1,
                 )
 
         search_ip_submask(string, 0, 0)

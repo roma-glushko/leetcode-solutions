@@ -4,7 +4,6 @@ from .kth_largest_element_in_an_array import KthLargestElementInAnArray
 
 
 class KthLargestElementInAnArrayTest(TestCase):
-
     def test_default_input(self):
         solution = KthLargestElementInAnArray()
 

@@ -3,6 +3,7 @@ class ReverseInteger:
     Problem Link: https://leetcode.com/problems/reverse-integer/
     Complexity: Easy
     """
+
     def reverse(self, x: int) -> int:
         resersed_x = 0
 
@@ -12,7 +13,7 @@ class ReverseInteger:
 
             resersed_x = resersed_x * 10 + reminder
 
-        if (resersed_x >= 2 ** 31 - 1) or (resersed_x <= -2 ** 31):
+        if (resersed_x >= 2 ** 31 - 1) or (resersed_x <= -(2 ** 31)):
             return 0
 
         return resersed_x

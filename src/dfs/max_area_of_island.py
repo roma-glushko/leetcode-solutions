@@ -34,7 +34,10 @@ class MaxAreaOfIsland:
                 # top cell
                 island_area += calculate_island_area(row_idx - 1, col_idx)
 
-            if row_idx + 1 < grid_height and grid[row_idx + 1][col_idx] == self.land_type:
+            if (
+                row_idx + 1 < grid_height
+                and grid[row_idx + 1][col_idx] == self.land_type
+            ):
                 # bottom cell
                 island_area += calculate_island_area(row_idx + 1, col_idx)
 
@@ -42,7 +45,10 @@ class MaxAreaOfIsland:
                 # left cell
                 island_area += calculate_island_area(row_idx, col_idx - 1)
 
-            if col_idx + 1 < grid_width and grid[row_idx][col_idx + 1] == self.land_type:
+            if (
+                col_idx + 1 < grid_width
+                and grid[row_idx][col_idx + 1] == self.land_type
+            ):
                 # right cell
                 island_area += calculate_island_area(row_idx, col_idx + 1)
 

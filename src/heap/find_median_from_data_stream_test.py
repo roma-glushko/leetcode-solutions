@@ -4,7 +4,6 @@ from .find_median_from_data_stream import FindMedianFromDataStream
 
 
 class FindMedianFromDataStreamTest(TestCase):
-
     def test_default_input(self):
         solution = FindMedianFromDataStream()
 

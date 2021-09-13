@@ -4,7 +4,6 @@ from .reverse_string import ReverseString
 
 
 class ReverseStringTest(TestCase):
-
     def test_default_input(self):
         solution = ReverseString()
 

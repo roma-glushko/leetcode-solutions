@@ -9,6 +9,7 @@ class PathSum:
     Runtime: 36ms
     Memory: 16MB
     """
+
     def hasPathSum(self, root: TreeNode, targetSum: int) -> bool:
         if not root:
             return False
@@ -23,5 +24,6 @@ class PathSum:
             # already leaf but targetSum is not diminished
             return False
 
-        return self.hasPathSum(root.left, targetSum) or \
-               self.hasPathSum(root.right, targetSum)
+        return self.hasPathSum(root.left, targetSum) or self.hasPathSum(
+            root.right, targetSum
+        )

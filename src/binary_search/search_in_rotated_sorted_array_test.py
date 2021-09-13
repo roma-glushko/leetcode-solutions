@@ -4,7 +4,6 @@ from .search_in_rotated_sorted_array import SearchInRotatedSortedArray
 
 
 class SearchInRotatedSortedArrayTest(TestCase):
-
     def test_default_input(self):
         solution = SearchInRotatedSortedArray()
 
