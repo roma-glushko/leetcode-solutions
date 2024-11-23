@@ -111,13 +111,13 @@ def generate_section_markdown(problems: list[Problem]) -> str:
         problems_by_topic[problem["topic"]].append(problem)
 
     # sort keys alphabetically and problems by complexity
-    complexity_order = {"Easy": 1, "Medium": 2, "Hard": 3}
+    complexity_order = {"easy": 1, "medium": 2, "hard": 3}
     problems_by_topic = dict(sorted(problems_by_topic.items()))
 
     # Sort problems by complexity within each topic
     for topic, topic_problems in problems_by_topic.items():
         problems_by_topic[topic] = sorted(
-            topic_problems, key=lambda p: complexity_order.get(p["complexity"], float("inf"))
+            topic_problems, key=lambda p: complexity_order.get(p["complexity"].lower(), float("inf"))
         )
 
     ext_lang = {
@@ -137,8 +137,9 @@ def generate_section_markdown(problems: list[Problem]) -> str:
 
             problem_name = problem["name"]
             problem_link = problem["link"]
+            problem_complexity = problem["complexity"]
 
-            markdown += f"- [{problem_name}]({problem_link}) ({" | ".join(solutions_md)}) \n"
+            markdown += f"- ({problem_complexity}) [{problem_name}]({problem_link}) ({" | ".join(solutions_md)}) \n"
 
     markdown += "\n## Credits \n\n"
     markdown += (
