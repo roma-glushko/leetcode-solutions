@@ -1,0 +1,5 @@
+complexity: Medium
+id: three_sum
+link: https://leetcode.com/problems/3sum/
+name: Three Sum
+topic: hash_table

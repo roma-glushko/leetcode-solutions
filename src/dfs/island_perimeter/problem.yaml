@@ -1,0 +1,5 @@
+complexity: Easy
+id: island_perimeter
+link: https://leetcode.com/problems/island-perimeter/
+name: Island Perimeter
+topic: dfs

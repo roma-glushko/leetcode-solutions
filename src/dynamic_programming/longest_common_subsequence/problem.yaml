@@ -1,0 +1,5 @@
+complexity: Medium
+id: longest_common_subsequence
+link: https://leetcode.com/problems/longest-common-subsequence/
+name: Longest Common Subsequence
+topic: dynamic_programming

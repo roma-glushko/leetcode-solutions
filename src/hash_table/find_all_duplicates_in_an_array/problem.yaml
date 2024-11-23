@@ -1,0 +1,5 @@
+complexity: Medium
+id: find_all_duplicates_in_an_array
+link: https://leetcode.com/problems/find-all-duplicates-in-an-array/
+name: Find All Duplicates In An Array
+topic: hash_table

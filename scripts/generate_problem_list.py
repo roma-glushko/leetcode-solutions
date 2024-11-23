@@ -1,27 +1,35 @@
-import glob
-import os
 import re
 from argparse import ArgumentParser
 from collections import defaultdict
 from pathlib import Path
-from typing import NamedTuple
+from typing import TypedDict
+import yaml
 
 
-def get_list_of_solution_files(root_dir: str) -> list[str]:
+class Problem(TypedDict):
+    id: str
+    topic: str
+    name: str
+    link: str
+    complexity: str
+    solution_files: list[Path] | None
+
+def get_solutions(problem_dir: Path) -> list[Path]:
     solution_patterns: list[str] = [
-        os.path.join(root_dir, "*", "*.py"),
-        os.path.join(root_dir, "*", "*.sql"),
+        "*.py",
+        "*.sql",
+        "*.go",
     ]
 
-    solution_files: list[str] = []
+    solution_files: list[Path] = []
 
     for solution_pattern in solution_patterns:
-        for file_path in glob.glob(solution_pattern):
-            if "test" in file_path:
+        for file_path in problem_dir.glob(solution_pattern):
+            if "test" in file_path.name:
                 # ignore tests
                 continue
 
-            if "__init__" in file_path:
+            if "__init__" in file_path.name:
                 # ignore module files
                 continue
 
@@ -29,6 +37,53 @@ def get_list_of_solution_files(root_dir: str) -> list[str]:
 
     return solution_files
 
+def get_problems(root_dir: Path) -> list[Problem]:
+    problems: list[Problem] = []
+
+    for problem_file_path in root_dir.glob("*/*/problem.yaml"):
+        with open(problem_file_path, "r") as problem_file:
+            problem_data = yaml.safe_load(problem_file)
+
+            problem_id = problem_data["id"]
+            problem_topic = problem_data["topic"]
+            problem_name = problem_data["name"]
+            problem_link = problem_data["link"]
+            problem_complexity = problem_data["complexity"]
+
+            problem_solutions = get_solutions(problem_file_path.parent)
+
+            if not problem_solutions:
+                print(f"warn: {problem_id} is ignored because it has no solutions yet")
+
+            problems.append(
+                Problem(
+                    id=problem_id,
+                    topic=problem_topic,
+                    name=problem_name,
+                    link=problem_link,
+                    complexity=problem_complexity,
+                    solution_files=problem_solutions,
+                )
+            )
+
+    return problems
+
+def get_solution_link_on_github(solution_path: str) -> str:
+    github_root_url: str = (
+        "https://github.com/roma-glushko/leetcode-solutions/tree/master/src"
+    )
+    local_path_pattern: str = r"((.|\.|\/)*src)"
+
+    github_solution_url: str = re.sub(
+        local_path_pattern, github_root_url, str(solution_path), 0, re.MULTILINE
+    )
+
+    if not github_solution_url:
+        raise RuntimeError(
+            "Cannot generate Github solution link for {} solution".format(solution_path)
+        )
+
+    return github_solution_url
 
 def get_title_from_filename(solution_path: str) -> str:
     solution_filename: str = str(Path(solution_path).name)
@@ -45,113 +100,45 @@ def get_title_from_filename(solution_path: str) -> str:
         .replace("Lru", "LRU")
     )
 
-
-def get_solution_link_on_github(solution_path: str) -> str:
-    github_root_url: str = (
-        "https://github.com/roma-glushko/leetcode-solutions/tree/master/src"
-    )
-    local_path_pattern: str = r"((.|\.|\/)*src)"
-
-    github_solution_url: str = re.sub(
-        local_path_pattern, github_root_url, solution_path, 0, re.MULTILINE
-    )
-
-    if not github_solution_url:
-        raise RuntimeError(
-            "Cannot generate Github solution link for {} solution".format(solution_path)
-        )
-
-    return github_solution_url
-
-
-class SolutionInfo(NamedTuple):
-    path: str
-    title: str
-    link: str
-    complexity: str
-
-
-def parse_problem_info(solution_paths: list[str]) -> dict[str, list[SolutionInfo]]:
-    link_pattern: str = r"Problem Link:\s(?P<link>https:\/\/.*)$"
-    complexity_pattern: str = r"Complexity:\s(?P<complexity>.*)$"
-
-    solutions: dict[str, list[SolutionInfo]] = defaultdict(list)
-
-    for solution_path in solution_paths:
-        with open(solution_path, "r") as file:
-            solution_content: str = file.read()
-
-            solution_topic: str = str(Path(solution_path).parent.name)
-            solution_title: str = get_title_from_filename(solution_path)
-
-            solution_info: SolutionInfo = SolutionInfo(
-                {
-                    "path": solution_path,
-                    "title": solution_title,
-                    "link": "",
-                    "complexity": "",
-                }
-            )
-
-            link_matches: re.Match = re.search(
-                link_pattern, solution_content, re.MULTILINE
-            )
-            complexity_matches: re.Match = re.search(
-                complexity_pattern, solution_content, re.MULTILINE
-            )
-
-            if link_matches:
-                solution_info["link"] = link_matches.group("link")
-            else:
-                print(
-                    "[warn] Solution {} doesn't have link specified".format(
-                        solution_path
-                    )
-                )
-
-            if complexity_matches:
-                solution_info["complexity"] = complexity_matches.group("complexity")
-            else:
-                print(
-                    "[warn] Solution {} doesn't have complexity specified".format(
-                        solution_path
-                    )
-                )
-
-            solutions[solution_topic].append(solution_info)
-
-    return solutions
-
-
-def generate_section_markdown(solutions: dict[str, list[SolutionInfo]]) -> str:
-    total_solutions: int = sum(
-        list(
-            map(
-                lambda solution_list: len(solution_list),
-                list(solutions.values()),
-            )
-        )
-    )
+def generate_section_markdown(problems: list[Problem]) -> str:
+    total_problems = len(problems)
 
     markdown: str = "## Problem List \n\n"
-    markdown += (
-        "In total, there are {} problems solved. Find all of them below.\n".format(
-            total_solutions
+    markdown += f"In total, there are {total_problems} problems solved. Find all of them below.\n"
+
+    problems_by_topic = defaultdict(list)
+    for problem in problems:
+        problems_by_topic[problem["topic"]].append(problem)
+
+    # sort keys alphabetically and problems by complexity
+    complexity_order = {"Easy": 1, "Medium": 2, "Hard": 3}
+    problems_by_topic = dict(sorted(problems_by_topic.items()))
+
+    # Sort problems by complexity within each topic
+    for topic, topic_problems in problems_by_topic.items():
+        problems_by_topic[topic] = sorted(
+            topic_problems, key=lambda p: complexity_order.get(p["complexity"], float("inf"))
         )
-    )
 
-    for topic in sorted(list(solutions.keys())):
-        markdown += "\n ### {} \n\n".format(get_title_from_filename(topic))
+    ext_lang = {
+        ".py": "Python",
+        ".sql": "SQL",
+        ".go": "Go",
+    }
 
-        topic_solutions = solutions[topic]
-        # todo: sort by complexity
+    for topic, topic_problems in problems_by_topic.items():
+        markdown += f"\n ### {get_title_from_filename(topic)} \n\n"
 
-        for solution in topic_solutions:
-            markdown += "- [{}]({}) ([Solution]({})) \n".format(
-                solution["title"],
-                solution["link"],
-                get_solution_link_on_github(solution["path"]),
-            )
+        for problem in topic_problems:
+            solutions_md = [
+                f"[{ext_lang[solution_path.suffix]}]({get_solution_link_on_github(solution_path)})"
+                for solution_path in problem["solution_files"]
+            ]
+
+            problem_name = problem["name"]
+            problem_link = problem["link"]
+
+            markdown += f"- [{problem_name}]({problem_link}) ({" | ".join(solutions_md)}) \n"
 
     markdown += "\n## Credits \n\n"
     markdown += (
@@ -161,7 +148,7 @@ def generate_section_markdown(solutions: dict[str, list[SolutionInfo]]) -> str:
     return markdown
 
 
-def update_readme_file(readme_path: str, new_section_content: str) -> None:
+def update_readme_file(readme_path: Path, new_section_content: str) -> None:
     section_pattern: str = r"(?P<list_section>## Problem List (.|\s|)*)"
 
     with open(readme_path, "r") as readme_file:
@@ -190,15 +177,15 @@ def get_arg_parser() -> ArgumentParser:
 if __name__ == "__main__":
     args = get_arg_parser().parse_args()
 
-    root_dir: str = args.solution_dir
-    readme_path: str = args.readme_path
+    root_dir: Path = Path(args.solution_dir).absolute()
+    readme_path: Path = Path(args.readme_path).absolute()
 
-    print("Collecting information about solutions..")
-    solution_files = get_list_of_solution_files(root_dir)
-    solutions = parse_problem_info(solution_files)
+    print("Collecting information about problems..")
+    problems = get_problems(root_dir)
+    print(f"Found {len(problems)} problems")
 
     print("Generating a new list section..")
-    markdown: str = generate_section_markdown(solutions)
+    markdown: str = generate_section_markdown(problems)
 
     print("Updating readme file..")
     update_readme_file(readme_path, markdown)

@@ -1,0 +1,5 @@
+complexity: Hard
+id: find_median_from_data_stream
+link: https://leetcode.com/problems/find-median-from-data-stream/
+name: Find Median From Data Stream
+topic: heap

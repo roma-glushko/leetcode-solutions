@@ -1,0 +1,5 @@
+complexity: Medium
+id: course_schedule
+link: https://leetcode.com/problems/course-schedule/
+name: Course Schedule
+topic: topological_sort

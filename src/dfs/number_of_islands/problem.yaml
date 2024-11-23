@@ -1,0 +1,5 @@
+complexity: Medium
+id: number_of_islands
+link: https://leetcode.com/problems/number-of-islands/
+name: Number Of Islands
+topic: dfs

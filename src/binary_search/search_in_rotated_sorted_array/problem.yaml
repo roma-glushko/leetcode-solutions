@@ -1,0 +1,5 @@
+complexity: Medium
+id: search_in_rotated_sorted_array
+link: https://leetcode.com/problems/search-in-rotated-sorted-array/
+name: Search In Rotated Sorted Array
+topic: binary_search

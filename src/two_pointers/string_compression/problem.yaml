@@ -1,0 +1,5 @@
+complexity: Medium
+id: string_compression
+link: https://leetcode.com/problems/string-compression/
+name: String Compression
+topic: two_pointers

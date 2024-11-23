@@ -1,0 +1,5 @@
+complexity: Medium
+id: max_area_of_island
+link: https://leetcode.com/problems/max-area-of-island/
+name: Max Area Of Island
+topic: dfs
