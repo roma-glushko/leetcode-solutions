@@ -4,16 +4,16 @@ import re
 from argparse import ArgumentParser
 from collections import defaultdict
 from pathlib import Path
-from typing import List, Dict
+from typing import NamedTuple
 
 
-def get_list_of_solution_files(root_dir: str) -> List[str]:
-    solution_patterns: List[str] = [
+def get_list_of_solution_files(root_dir: str) -> list[str]:
+    solution_patterns: list[str] = [
         os.path.join(root_dir, "*", "*.py"),
         os.path.join(root_dir, "*", "*.sql"),
     ]
 
-    solution_files: List[str] = []
+    solution_files: list[str] = []
 
     for solution_pattern in solution_patterns:
         for file_path in glob.glob(solution_pattern):
@@ -64,11 +64,18 @@ def get_solution_link_on_github(solution_path: str) -> str:
     return github_solution_url
 
 
-def parse_problem_info(solution_paths: List[str]) -> Dict[str, List[Dict]]:
+class SolutionInfo(NamedTuple):
+    path: str
+    title: str
+    link: str
+    complexity: str
+
+
+def parse_problem_info(solution_paths: list[str]) -> dict[str, list[SolutionInfo]]:
     link_pattern: str = r"Problem Link:\s(?P<link>https:\/\/.*)$"
     complexity_pattern: str = r"Complexity:\s(?P<complexity>.*)$"
 
-    solutions: Dict[str, List[Dict]] = defaultdict(list)
+    solutions: dict[str, list[SolutionInfo]] = defaultdict(list)
 
     for solution_path in solution_paths:
         with open(solution_path, "r") as file:
@@ -77,12 +84,14 @@ def parse_problem_info(solution_paths: List[str]) -> Dict[str, List[Dict]]:
             solution_topic: str = str(Path(solution_path).parent.name)
             solution_title: str = get_title_from_filename(solution_path)
 
-            solution_info: Dict = {
-                "path": solution_path,
-                "title": solution_title,
-                "link": "",
-                "complexity": "",
-            }
+            solution_info: SolutionInfo = SolutionInfo(
+                {
+                    "path": solution_path,
+                    "title": solution_title,
+                    "link": "",
+                    "complexity": "",
+                }
+            )
 
             link_matches: re.Match = re.search(
                 link_pattern, solution_content, re.MULTILINE
@@ -114,7 +123,7 @@ def parse_problem_info(solution_paths: List[str]) -> Dict[str, List[Dict]]:
     return solutions
 
 
-def generate_section_markdown(solutions: Dict[str, List[Dict]]) -> str:
+def generate_section_markdown(solutions: dict[str, list[SolutionInfo]]) -> str:
     total_solutions: int = sum(
         list(
             map(
@@ -145,7 +154,9 @@ def generate_section_markdown(solutions: Dict[str, List[Dict]]) -> str:
             )
 
     markdown += "\n## Credits \n\n"
-    markdown += "Challenges were solved with ❤️ by [Roman Glushko](https://www.romaglushko.com/)"
+    markdown += (
+        "Challenges were solved with ❤️ by [Roman Glushko](https://www.romaglushko.com/)"
+    )
 
     return markdown
 

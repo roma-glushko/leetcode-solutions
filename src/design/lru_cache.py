@@ -1,5 +1,5 @@
 from collections import OrderedDict
-from typing import Dict, Optional
+from typing import Self
 
 
 class Node:
@@ -7,12 +7,14 @@ class Node:
     Linked List Node. Contains key-value pair and links to neighbor elements.
     """
 
-    def __init__(self, key: int, value: int, prev=None, next=None):
+    def __init__(
+        self, key: int, value: int, prev: Self | None = None, next_: Self | None = None
+    ):
         self.key: int = key
         self.value: int = value
 
-        self.prev: Optional[Node] = prev
-        self.next: Optional[Node] = next
+        self.prev: Node | None = prev
+        self.next: Node | None = next_
 
 
 class LinkedList:
@@ -20,8 +22,8 @@ class LinkedList:
     Linked List. Represents usage history of cache items
     """
 
-    head: Optional[Node] = None
-    tail: Optional[Node] = None
+    head: Node | None = None
+    tail: Node | None = None
 
     def add_to_head(self, item: Node) -> None:
         """
@@ -77,7 +79,7 @@ class LRUCache:
     """
 
     capacity: int
-    cache_map: Dict[int, Node]
+    cache_map: dict[int, Node]
     history: LinkedList
 
     def __init__(self, capacity: int):
@@ -123,9 +125,9 @@ class LRUCache:
         """
         Evict the least recently used item
         """
-        lru_item: Node = self.history.tail
+        lru_item: Node | None = self.history.tail
 
-        if lru_item is None:
+        if not lru_item:
             return
 
         self.remove_item(lru_item)
@@ -151,7 +153,7 @@ class LRUCache2:
     capacity: int
     cache_map: OrderedDict
 
-    def __init__(self, capacity: int):
+    def __init__(self, capacity: int) -> None:
         self.capacity = capacity
         self.cache_map = OrderedDict()
 

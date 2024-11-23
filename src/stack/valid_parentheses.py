@@ -1,6 +1,3 @@
-from typing import Dict, List, Tuple
-
-
 class ValidParentheses:
     """
     Problem Link: https://leetcode.com/problems/valid-parentheses/
@@ -10,15 +7,15 @@ class ValidParentheses:
     Memory: 14.5MB
     """
 
-    openings: Tuple[str] = ("(", "[", "{")
-    closing_map: Dict[str, str] = {
+    openings: tuple[str, ...] = ("(", "[", "{")
+    closing_map: dict[str, str] = {
         ")": "(",
         "]": "[",
         "}": "{",
     }
 
     def isValid(self, s: str) -> bool:
-        parentheses_stack: List[str] = []
+        parentheses_stack: list[str] = []
 
         for parentheses in s:
             if parentheses in self.openings:

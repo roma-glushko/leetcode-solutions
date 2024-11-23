@@ -7,7 +7,7 @@ class SearchInABinaryTree:
     Complexity: Easy
     """
 
-    def searchBST(self, root: TreeNode, val: int) -> TreeNode:
+    def searchBST(self, root: TreeNode, val: int) -> TreeNode | None:
         if root and root.val == val:
             return root
 

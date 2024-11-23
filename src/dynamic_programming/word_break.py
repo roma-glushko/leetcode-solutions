@@ -8,4 +8,4 @@ class WordBreak:
     """
 
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
-        pass
+        raise NotImplementedError

@@ -1,6 +1,3 @@
-from typing import List
-
-
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -21,7 +18,7 @@ class MergeKSortedLists:
             Runtime: O(n*log(k)), Memory: O(k)
     """
 
-    def mergeKLists(self, lists: List[ListNode]) -> ListNode:
+    def mergeKLists(self, lists: list[ListNode]) -> ListNode | None:
         if not lists:
             return None
 

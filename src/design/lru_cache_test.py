@@ -78,7 +78,7 @@ class LRUCacheTest(TestCase):
     def test_long_list_of_values(self):
         cache = LRUCache(10)
 
-        for (key, value) in [[10, 13], [3, 17], [6, 11], [10, 5], [9, 10]]:
+        for key, value in [[10, 13], [3, 17], [6, 11], [10, 5], [9, 10]]:
             cache.put(key, value)
 
         self.assertEqual(cache.get(13), -1)
@@ -92,7 +92,7 @@ class LRUCacheTest(TestCase):
 
         self.assertEqual(cache.get(8), -1)
 
-        for (key, value) in [[9, 22], [5, 5], [1, 30]]:
+        for key, value in [[9, 22], [5, 5], [1, 30]]:
             cache.put(key, value)
 
         self.assertEqual(cache.get(11), -1)
@@ -126,7 +126,7 @@ class LRUCacheTest(TestCase):
         self.assertEqual(cache.get(5), 5)
         self.assertEqual(cache.get(4), 30)
 
-        for (key, value) in [[11, 4], [12, 24], [5, 18]]:
+        for key, value in [[11, 4], [12, 24], [5, 18]]:
             cache.put(key, value)
 
         self.assertEqual(cache.get(13), -1)
@@ -141,7 +141,7 @@ class LRUCacheTest(TestCase):
 
         self.assertEqual(cache.get(5), 18)
 
-        for (key, value) in [[2, 9], [13, 4], [8, 18], [1, 7]]:
+        for key, value in [[2, 9], [13, 4], [8, 18], [1, 7]]:
             cache.put(key, value)
 
         self.assertEqual(cache.get(6), -1)
@@ -156,7 +156,7 @@ class LRUCacheTest(TestCase):
 
         self.assertEqual(cache.get(10), -1)
 
-        for (key, value) in [[4, 15], [7, 22], [11, 26], [8, 17], [9, 29]]:
+        for key, value in [[4, 15], [7, 22], [11, 26], [8, 17], [9, 29]]:
             cache.put(key, value)
 
         self.assertEqual(cache.get(5), 18)
@@ -199,24 +199,24 @@ class LRUCacheTest(TestCase):
 
         self.assertEqual(cache.get(12), -1)
 
-        for (key, value) in [[9, 19], [2, 15], [3, 16]]:
+        for key, value in [[9, 19], [2, 15], [3, 16]]:
             cache.put(key, value)
 
         self.assertEqual(cache.get(1), 20)
 
-        for (key, value) in [[12, 17], [9, 1], [6, 19]]:
+        for key, value in [[12, 17], [9, 1], [6, 19]]:
             cache.put(key, value)
 
         self.assertEqual(cache.get(4), -1)
         self.assertEqual(cache.get(5), 18)
         self.assertEqual(cache.get(5), 18)
 
-        for (key, value) in [[8, 1], [11, 7], [5, 2], [9, 28]]:
+        for key, value in [[8, 1], [11, 7], [5, 2], [9, 28]]:
             cache.put(key, value)
 
         self.assertEqual(cache.get(1), 20)
 
-        for (key, value) in [
+        for key, value in [
             [2, 2],
             [7, 4],
             [4, 22],
