@@ -20,7 +20,7 @@ make gen
 In total, there are 53 problems solved:
 
 - Python: 52
-- Go: 2
+- Go: 3
 - SQL: 1
 
 Find all of them below.
@@ -91,8 +91,8 @@ Find all of them below.
 
  ### Mathematics 
 
-- (Easy) [Reverse Integer](https://leetcode.com/problems/reverse-integer/) ([Python](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/mathematics/reverse_integer/reverse_integer.py)) 
 - (Medium) [Pow](https://leetcode.com/problems/powx-n/) ([Python](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/mathematics/pow/pow.py)) 
+- (Medium) [Reverse Integer](https://leetcode.com/problems/reverse-integer/) ([Python](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/mathematics/reverse_integer/reverse_integer.py) | [Go](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/mathematics/reverse_integer/revese_integer.go)) 
 
  ### Sorting 
 
