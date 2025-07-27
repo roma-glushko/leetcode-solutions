@@ -19,3 +19,7 @@ lint: ## Lint source code
 	@uv run ruff check --fix $(SOURCE)
 	@echo "🧽 MyPy"
 	@uv run mypy --pretty $(SOURCE)
+
+gen: ## Regenerate README.md
+	@echo "🔄 Generating README.md"
+	@uv run scripts/generate_problem_list.py --solution_dir src --readme_path README.md
