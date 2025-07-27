@@ -80,7 +80,7 @@ In total, there are 53 problems solved. Find all of them below.
 
 - (Easy) [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) ([Python](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/linked_list/merge_two_sorted_lists/merge_two_sorted_lists.py)) 
 - (Easy) [Middle Of The Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) ([Python](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/linked_list/middle_of_the_linked_list/middle_of_the_linked_list.py)) 
-- (Medium) [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) ([Python](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/linked_list/add_two_numbers/add_two_numbers.py)) 
+- (Medium) [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) ([Python](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/linked_list/add_two_numbers/add_two_numbers.py) | [Go](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/linked_list/add_two_numbers/add_two_numbers.go)) 
 - (Hard) [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) ([Python](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/linked_list/merge_k_sorted_lists/merge_k_sorted_lists.py)) 
 
  ### Mathematics 
