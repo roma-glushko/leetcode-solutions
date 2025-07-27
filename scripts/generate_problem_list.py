@@ -14,6 +14,7 @@ class Problem(TypedDict):
     complexity: str
     solution_files: list[Path] | None
 
+
 def get_solutions(problem_dir: Path) -> list[Path]:
     solution_patterns: list[str] = [
         "*.py",
@@ -36,6 +37,7 @@ def get_solutions(problem_dir: Path) -> list[Path]:
             solution_files.append(file_path)
 
     return solution_files
+
 
 def get_problems(root_dir: Path) -> list[Problem]:
     problems: list[Problem] = []
@@ -68,6 +70,7 @@ def get_problems(root_dir: Path) -> list[Problem]:
 
     return problems
 
+
 def get_solution_link_on_github(solution_path: str) -> str:
     github_root_url: str = (
         "https://github.com/roma-glushko/leetcode-solutions/tree/master/src"
@@ -85,6 +88,7 @@ def get_solution_link_on_github(solution_path: str) -> str:
 
     return github_solution_url
 
+
 def get_title_from_filename(solution_path: str) -> str:
     solution_filename: str = str(Path(solution_path).name)
 
@@ -99,6 +103,7 @@ def get_title_from_filename(solution_path: str) -> str:
         .replace("Sql", "SQL")
         .replace("Lru", "LRU")
     )
+
 
 def generate_section_markdown(problems: list[Problem]) -> str:
     total_problems = len(problems)
@@ -117,7 +122,8 @@ def generate_section_markdown(problems: list[Problem]) -> str:
     # Sort problems by complexity within each topic
     for topic, topic_problems in problems_by_topic.items():
         problems_by_topic[topic] = sorted(
-            topic_problems, key=lambda p: complexity_order.get(p["complexity"].lower(), float("inf"))
+            topic_problems,
+            key=lambda p: complexity_order.get(p["complexity"].lower(), float("inf")),
         )
 
     ext_lang = {
@@ -139,7 +145,7 @@ def generate_section_markdown(problems: list[Problem]) -> str:
             problem_link = problem["link"]
             problem_complexity = problem["complexity"]
 
-            markdown += f"- ({problem_complexity}) [{problem_name}]({problem_link}) ({" | ".join(solutions_md)}) \n"
+            markdown += f"- ({problem_complexity}) [{problem_name}]({problem_link}) ({' | '.join(solutions_md)}) \n"
 
     markdown += "\n## Credits \n\n"
     markdown += (

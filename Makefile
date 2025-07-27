@@ -8,14 +8,14 @@ help:
 
 lint-check: ## Lint source code without modifying it
 	@echo "🧹 Ruff"
-	@pdm run ruff format $(SOURCE) --diff
-	@pdm run ruff check $(SOURCE)
-	@pdm "🧽 MyPy"
-	@poetry run mypy --pretty $(SOURCE)
+	@uv run ruff format $(SOURCE) --diff
+	@uv run ruff check $(SOURCE)
+	@echo "🧽 MyPy"
+	@uv run mypy --pretty $(SOURCE)
 
 lint: ## Lint source code
 	@echo "🧹 Ruff"
-	@pdm run ruff format $(SOURCE)
-	@pdm run ruff check --fix $(SOURCE)
+	@uv run ruff format $(SOURCE)
+	@uv run ruff check --fix $(SOURCE)
 	@echo "🧽 MyPy"
-	@pdm run mypy --pretty $(SOURCE)
+	@uv run mypy --pretty $(SOURCE)
