@@ -15,6 +15,7 @@ func TestReverseInteger(t *testing.T) {
 		{input: -123, want: -321},
 		{input: 120, want: 21},
 		{input: 1534236469, want: 0},
+		{input: 2000000000000, want: 2},
 	}
 
 	for _, tt := range tests {
