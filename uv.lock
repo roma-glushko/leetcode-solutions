@@ -5,7 +5,7 @@ requires-python = ">=3.12"
 [[package]]
 name = "leetcode-solutions"
 version = "1.0.0"
-source = { editable = "." }
+source = { virtual = "." }
 dependencies = [
     { name = "mypy" },
     { name = "pyyaml" },
