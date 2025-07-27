@@ -107,9 +107,7 @@ def get_title_from_filename(solution_path: str) -> str:
 
 def generate_section_markdown(problems: list[Problem]) -> str:
     total_problems = len(problems)
-
-    markdown: str = "## Problem List \n\n"
-    markdown += f"In total, there are {total_problems} problems solved. Find all of them below.\n"
+    total_by_lang = defaultdict(int)
 
     problems_by_topic = defaultdict(list)
     for problem in problems:
@@ -132,8 +130,10 @@ def generate_section_markdown(problems: list[Problem]) -> str:
         ".go": "Go",
     }
 
+    problems_by_topic_md = ""
+
     for topic, topic_problems in problems_by_topic.items():
-        markdown += f"\n ### {get_title_from_filename(topic)} \n\n"
+        problems_by_topic_md += f"\n ### {get_title_from_filename(topic)} \n\n"
 
         for problem in topic_problems:
             solutions_md = [
@@ -141,11 +141,26 @@ def generate_section_markdown(problems: list[Problem]) -> str:
                 for solution_path in problem["solution_files"]
             ]
 
+            for solution_path in problem["solution_files"]:
+                for ext, lang in ext_lang.items():
+                    if solution_path.suffix == ext:
+                        total_by_lang[lang] += 1
+
             problem_name = problem["name"]
             problem_link = problem["link"]
             problem_complexity = problem["complexity"]
 
-            markdown += f"- ({problem_complexity}) [{problem_name}]({problem_link}) ({' | '.join(solutions_md)}) \n"
+            problems_by_topic_md += f"- ({problem_complexity}) [{problem_name}]({problem_link}) ({' | '.join(solutions_md)}) \n"
+
+    markdown: str = "## Problem List \n\n"
+    markdown += f"In total, there are {total_problems} problems solved:\n"
+
+    for lang, total in total_by_lang.items():
+        markdown += f"\n- {lang}: {total}"
+
+    markdown += f"\n\nFind all of them below.\n"
+
+    markdown += problems_by_topic_md
 
     markdown += "\n## Credits \n\n"
     markdown += (

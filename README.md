@@ -17,7 +17,13 @@ python scripts/generate_problem_list.py --solution_dir ./src --readme_path ./rea
 
 ## Problem List 
 
-In total, there are 53 problems solved. Find all of them below.
+In total, there are 53 problems solved:
+
+- Python: 52
+- Go: 2
+- SQL: 1
+
+Find all of them below.
 
  ### Arrays 
 
