@@ -11,8 +11,8 @@ These solutions may be helpful if you are stuck and want to know how to approach
 
 The problem list section is auto-generated via:
 
-```bash
-python scripts/generate_problem_list.py --solution_dir ./src --readme_path ./readme.md
+```sh
+make gen
 ```
 
 ## Problem List 
