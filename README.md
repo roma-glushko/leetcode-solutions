@@ -67,7 +67,7 @@ In total, there are 53 problems solved. Find all of them below.
 
  ### Hash Table 
 
-- (Easy) [Two Sum](https://leetcode.com/problems/two-sum/) ([Python](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/hash_table/two_sum/two_sum.py)) 
+- (Easy) [Two Sum](https://leetcode.com/problems/two-sum/) ([Python](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/hash_table/two_sum/two_sum.py) | [Go](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/hash_table/two_sum/two_sum.go)) 
 - (Medium) [Find All Duplicates In An Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) ([Python](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/hash_table/find_all_duplicates_in_an_array/find_all_duplicates_in_an_array.py)) 
 - (Medium) [Three Sum](https://leetcode.com/problems/3sum/) ([Python](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/hash_table/three_sum/three_sum.py)) 
 
