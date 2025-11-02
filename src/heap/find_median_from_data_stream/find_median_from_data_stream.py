@@ -1,4 +1,4 @@
-from heapq import heappush, heappushpop
+from heapq import heappush, heappushpop, heappop
 
 
 class FindMedianFromDataStream:
@@ -26,3 +26,32 @@ class FindMedianFromDataStream:
         return 0.5 * (
             self.stream[self.stream_part][0] * self.stream_part + self.stream[-1][0]
         )
+
+
+class FindMedianFromDataStreamV2:
+    """
+    Runtime: 155ms
+    Memory: 40MB
+    """
+    def __init__(self):
+        self.lower = []
+        self.upper = []
+
+    def addNum(self, num: int) -> None:
+        if len(self.lower) > 0 and num <= -self.lower[0]:
+            heappush(self.lower, -num)
+        else:
+            heappush(self.upper, num)
+
+        # Balance the heaps
+        if len(self.upper) > len(self.lower) + 1:
+            heappush(self.lower, -heappop(self.upper))
+
+        if len(self.lower) > len(self.upper):
+            heappush(self.upper, -heappop(self.lower))
+
+    def findMedian(self) -> float:
+        if len(self.upper) > len(self.lower):
+            return float(self.upper[0])
+
+        return (-self.lower[0] + self.upper[0]) / 2.0
