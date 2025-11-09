@@ -1,0 +1,5 @@
+complexity: Medium
+id: coin_change
+link: https://leetcode.com/problems/coin-change/
+name: Coin Change
+topic: dynamic_programming
