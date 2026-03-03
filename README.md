@@ -15,11 +15,11 @@ The problem list section is auto-generated via:
 make gen
 ```
 
-## Problem List 
+## Leetcode 
 
 In total, there are 53 problems solved:
 
-- Python: 52
+- Python: 53
 - Go: 3
 - SQL: 1
 
@@ -131,6 +131,14 @@ Find all of them below.
 - (Easy) [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) ([Python](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/two_pointers/merge_sorted_array/merge_sorted_array.py)) 
 - (Easy) [Reverse String](https://leetcode.com/problems/reverse-string/) ([Python](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/two_pointers/reverse_string/reverse_string.py)) 
 - (Medium) [String Compression](https://leetcode.com/problems/string-compression/) ([Python](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/two_pointers/string_compression/string_compression.py)) 
+
+## Katas 
+
+Implementation exercises for common design primitives (1 total).
+
+ ### Design 
+
+- (Medium) [Token Bucket Rate Limiter](https://en.wikipedia.org/wiki/Token_bucket) ([Python](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/design/token_bucket_rate_limiter/token_bucket_rate_limiter.py)) 
 
 ## Credits 
 
