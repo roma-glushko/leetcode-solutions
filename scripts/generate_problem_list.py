@@ -12,6 +12,7 @@ class Problem(TypedDict):
     name: str
     link: str
     complexity: str
+    type: str
     solution_files: list[Path] | None
 
 
@@ -51,6 +52,7 @@ def get_problems(root_dir: Path) -> list[Problem]:
             problem_name = problem_data["name"]
             problem_link = problem_data["link"]
             problem_complexity = problem_data["complexity"]
+            problem_type = problem_data.get("type", "leetcode")
 
             problem_solutions = get_solutions(problem_file_path.parent)
 
@@ -64,6 +66,7 @@ def get_problems(root_dir: Path) -> list[Problem]:
                     name=problem_name,
                     link=problem_link,
                     complexity=problem_complexity,
+                    type=problem_type,
                     solution_files=problem_solutions,
                 )
             )
@@ -105,35 +108,34 @@ def get_title_from_filename(solution_path: str) -> str:
     )
 
 
-def generate_section_markdown(problems: list[Problem]) -> str:
-    total_problems = len(problems)
-    total_by_lang = defaultdict(int)
-
-    problems_by_topic = defaultdict(list)
-    for problem in problems:
-        problems_by_topic[problem["topic"]].append(problem)
-
-    # sort keys alphabetically and problems by complexity
-    complexity_order = {"easy": 1, "medium": 2, "hard": 3}
-    problems_by_topic = dict(sorted(problems_by_topic.items()))
-
-    # Sort problems by complexity within each topic
-    for topic, topic_problems in problems_by_topic.items():
-        problems_by_topic[topic] = sorted(
-            topic_problems,
-            key=lambda p: complexity_order.get(p["complexity"].lower(), float("inf")),
-        )
-
+def generate_problems_by_topic_markdown(
+    problems: list[Problem],
+    total_by_lang: dict[str, int],
+) -> str:
     ext_lang = {
         ".py": "Python",
         ".sql": "SQL",
         ".go": "Go",
     }
 
-    problems_by_topic_md = ""
+    complexity_order = {"easy": 1, "medium": 2, "hard": 3}
+
+    problems_by_topic: dict[str, list[Problem]] = defaultdict(list)
+    for problem in problems:
+        problems_by_topic[problem["topic"]].append(problem)
+
+    problems_by_topic = dict(sorted(problems_by_topic.items()))
 
     for topic, topic_problems in problems_by_topic.items():
-        problems_by_topic_md += f"\n ### {get_title_from_filename(topic)} \n\n"
+        problems_by_topic[topic] = sorted(
+            topic_problems,
+            key=lambda p: complexity_order.get(p["complexity"].lower(), float("inf")),
+        )
+
+    md = ""
+
+    for topic, topic_problems in problems_by_topic.items():
+        md += f"\n ### {get_title_from_filename(topic)} \n\n"
 
         for problem in topic_problems:
             solutions_md = [
@@ -150,17 +152,33 @@ def generate_section_markdown(problems: list[Problem]) -> str:
             problem_link = problem["link"]
             problem_complexity = problem["complexity"]
 
-            problems_by_topic_md += f"- ({problem_complexity}) [{problem_name}]({problem_link}) ({' | '.join(solutions_md)}) \n"
+            md += f"- ({problem_complexity}) [{problem_name}]({problem_link}) ({' | '.join(solutions_md)}) \n"
 
-    markdown: str = "## Problem List \n\n"
-    markdown += f"In total, there are {total_problems} problems solved:\n"
+    return md
+
+
+def generate_section_markdown(problems: list[Problem]) -> str:
+    total_by_lang: dict[str, int] = defaultdict(int)
+
+    leetcode_problems = [p for p in problems if p["type"] == "leetcode"]
+    kata_problems = [p for p in problems if p["type"] == "kata"]
+
+    leetcode_md = generate_problems_by_topic_markdown(leetcode_problems, total_by_lang)
+    kata_md = generate_problems_by_topic_markdown(kata_problems, total_by_lang)
+
+    markdown: str = "## Leetcode \n\n"
+    markdown += f"In total, there are {len(leetcode_problems)} problems solved:\n"
 
     for lang, total in total_by_lang.items():
         markdown += f"\n- {lang}: {total}"
 
-    markdown += f"\n\nFind all of them below.\n"
+    markdown += "\n\nFind all of them below.\n"
+    markdown += leetcode_md
 
-    markdown += problems_by_topic_md
+    if kata_problems:
+        markdown += "\n## Katas \n\n"
+        markdown += f"Implementation exercises for common design primitives ({len(kata_problems)} total).\n"
+        markdown += kata_md
 
     markdown += "\n## Credits \n\n"
     markdown += (

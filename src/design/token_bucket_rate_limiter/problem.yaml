@@ -1,0 +1,6 @@
+complexity: Medium
+id: token_bucket_rate_limiter
+link: https://en.wikipedia.org/wiki/Token_bucket
+name: Token Bucket Rate Limiter
+topic: design
+type: kata

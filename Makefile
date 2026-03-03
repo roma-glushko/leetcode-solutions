@@ -23,3 +23,9 @@ lint: ## Lint source code
 gen: ## Regenerate README.md
 	@echo "🔄 Generating README.md"
 	@uv run scripts/generate_problem_list.py --solution_dir src --readme_path README.md
+
+gym: ## Suggest challenges to retake
+	@uv run scripts/gym.py suggest --solution_dir src
+
+gym-submit: ## Record completed gym challenges
+	@uv run scripts/gym.py submit --solution_dir src
