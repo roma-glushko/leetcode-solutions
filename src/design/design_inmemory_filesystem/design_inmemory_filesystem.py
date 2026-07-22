@@ -1,6 +1,3 @@
-from typing import Dict
-
-
 class FSObject:
     name: str = ""
 
@@ -24,7 +21,7 @@ class FileSystem:
     Locked: true
     """
 
-    filesystem_map: Dict[str, FSObject]
+    filesystem_map: dict[str, FSObject]
 
     def ls(self, path: str):
         pass

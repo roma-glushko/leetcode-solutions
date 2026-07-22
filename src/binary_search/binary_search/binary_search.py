@@ -1,6 +1,3 @@
-from typing import List
-
-
 class BinarySearch:
     """
     Problem Link: https://leetcode.com/problems/binary-search/
@@ -10,7 +7,7 @@ class BinarySearch:
     Memory: 15.6MB
     """
 
-    def search(self, nums: List[int], target: int) -> int:
+    def search(self, nums: list[int], target: int) -> int:
         left_idx: int = 0
         right_idx: int = len(nums) - 1
 

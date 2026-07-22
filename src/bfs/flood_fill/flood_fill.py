@@ -1,6 +1,3 @@
-from typing import List
-
-
 class FloodFill:
     """
     Problem Link: https://leetcode.com/problems/flood-fill/
@@ -8,8 +5,8 @@ class FloodFill:
     """
 
     def floodFill(
-        self, image: List[List[int]], sr: int, sc: int, new_color: int
-    ) -> List[List[int]]:
+        self, image: list[list[int]], sr: int, sc: int, new_color: int
+    ) -> list[list[int]]:
         old_color = image[sr][sc]
 
         if old_color == new_color:

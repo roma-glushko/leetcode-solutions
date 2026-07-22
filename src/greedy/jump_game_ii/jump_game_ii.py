@@ -1,5 +1,4 @@
 from itertools import accumulate
-from typing import List
 
 
 class JumpGameII:
@@ -10,7 +9,7 @@ class JumpGameII:
     Memory: 15.4 MB
     """
 
-    def jump(self, nums: List[int]) -> int:
+    def jump(self, nums: list[int]) -> int:
         nums_len = len(nums)
         if nums_len <= 1:
             # already at the final cell

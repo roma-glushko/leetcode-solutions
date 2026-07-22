@@ -1,6 +1,3 @@
-from typing import Dict, List
-
-
 class MinStack:
     """
     Problem Link: https://leetcode.com/problems/min-stack/
@@ -8,7 +5,7 @@ class MinStack:
     """
 
     def __init__(self):
-        self.stack: List[Dict] = []
+        self.stack: list[dict] = []
 
     def push(self, val: int) -> None:
         # at any given state of the stack,

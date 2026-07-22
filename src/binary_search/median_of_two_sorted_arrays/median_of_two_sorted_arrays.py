@@ -1,5 +1,4 @@
 import math
-from typing import List
 
 
 class MedianOfTwoSortedArrays:
@@ -11,7 +10,7 @@ class MedianOfTwoSortedArrays:
     Memory: 14.6MB
     """
 
-    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+    def findMedianSortedArrays(self, nums1: list[int], nums2: list[int]) -> float:
         total_size: int = len(nums1) + len(nums2)
         total_half_size: int = (total_size + 1) // 2  #
 
@@ -29,7 +28,7 @@ class MedianOfTwoSortedArrays:
                 + min(num1_min_right_elem, num2_min_right_elem)
             )
 
-        def get_median_from_array(numbers: List[int]) -> float:
+        def get_median_from_array(numbers: list[int]) -> float:
             if total_size % 2 != 0:
                 return numbers[
                     total_half_size - 1

@@ -1,13 +1,10 @@
-from typing import List
-
-
 class Solution:
     """
     Problem Link: https://leetcode.com/problems/island-perimeter/
     Complexity: Easy
     """
 
-    def islandPerimeter(self, grid: List[List[int]]) -> int:
+    def islandPerimeter(self, grid: list[list[int]]) -> int:
         height = len(grid)
         width = len(grid[0])
 

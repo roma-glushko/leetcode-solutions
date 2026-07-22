@@ -1,6 +1,3 @@
-from typing import List
-
-
 class SortColors:
     """
     Problem Link: https://leetcode.com/problems/sort-colors/
@@ -10,11 +7,11 @@ class SortColors:
     Memory: 14.4MB
     """
 
-    def sortColors(self, nums: List[int]) -> None:
+    def sortColors(self, nums: list[int]) -> None:
         """
         Do not return anything, modify nums in-place instead.
         """
-        colors: List[int] = [0, 0, 0]
+        colors: list[int] = [0, 0, 0]
 
         for color_idx in nums:
             colors[color_idx] += 1

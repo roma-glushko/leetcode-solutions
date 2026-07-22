@@ -1,5 +1,4 @@
 from collections import defaultdict
-from typing import Dict, List
 
 
 class LongestConsecutiveSequence:
@@ -8,14 +7,14 @@ class LongestConsecutiveSequence:
     Complexity: Medium
     """
 
-    def longestConsecutive(self, nums: List[int]) -> int:
+    def longestConsecutive(self, nums: list[int]) -> int:
         """
         This solution is based on idea that steak for the current number num = 1 + steak(num - 1)
         Runtime: 324 ms
         Memory: 108.5 MB
         """
         available_nums = set(nums)
-        sequences_len_map: Dict[int, int] = defaultdict(int)
+        sequences_len_map: dict[int, int] = defaultdict(int)
         max_steak: int = 0
 
         def get_steak_at(num: int) -> int:
@@ -49,7 +48,7 @@ class LongestConsecutiveSequence:
 
         return max_steak
 
-    def longestConsecutive2(self, nums: List[int]) -> int:
+    def longestConsecutive2(self, nums: list[int]) -> int:
         """
         This solution is based on idea of finding the beginnings of the sequences and iterate from there until the end.
         Each possible sequence would be checked once.

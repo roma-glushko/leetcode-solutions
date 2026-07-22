@@ -1,17 +1,14 @@
-from typing import List
-
-
 class CountingBits:
     """
     Problem Link: https://leetcode.com/problems/counting-bits/
     Complexity: Easy
     """
 
-    def countBits(self, n: int) -> List[int]:
+    def countBits(self, n: int) -> list[int]:
         if n == 0:
             return [0]
 
-        bits_number: List[int] = [0, 1]
+        bits_number: list[int] = [0, 1]
 
         if n == 1:
             return bits_number

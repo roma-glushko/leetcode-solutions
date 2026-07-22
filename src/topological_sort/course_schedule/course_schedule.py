@@ -1,15 +1,12 @@
-from typing import List, Set
-
-
 class CourseSchedule:
     """
     Problem Link: https://leetcode.com/problems/course-schedule/
     Complexity: Medium
     """
 
-    validated_courses: Set = set()
-    course_dependency_set: Set = set()
-    course_requirements: List[List[int]]
+    validated_courses: set = set()
+    course_dependency_set: set = set()
+    course_requirements: list[list[int]]
 
     def are_course_requirements_valid(self, course_idx: int) -> bool:
         self.validated_courses.add(course_idx)
@@ -32,7 +29,7 @@ class CourseSchedule:
 
         return True
 
-    def canFinish(self, num_courses: int, prerequisites: List[List[int]]) -> bool:
+    def canFinish(self, num_courses: int, prerequisites: list[list[int]]) -> bool:
         self.validated_courses = set()
         self.course_requirements = [[] for _ in range(num_courses)]
 
@@ -44,7 +41,7 @@ class CourseSchedule:
                 # course requirements tree has been already validated, so no contradictions were found there
                 continue
 
-            self.course_dependency_set: Set = set()
+            self.course_dependency_set: set = set()
 
             if not self.are_course_requirements_valid(course_idx):
                 # stop exploring the dependency graph at the very first contradiction

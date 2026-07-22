@@ -1,13 +1,10 @@
-from typing import List, Tuple
-
-
 class TwoSum:
     """
     Problem Link: https://leetcode.com/problems/two-sum/
     Complexity: Easy
     """
 
-    def twoSum(self, nums: List[int], target: int) -> Tuple[int, int]:
+    def twoSum(self, nums: list[int], target: int) -> tuple[int, int]:
         available_numbers = {num: idx for idx, num in enumerate(nums)}
 
         for idx, num in enumerate(nums):

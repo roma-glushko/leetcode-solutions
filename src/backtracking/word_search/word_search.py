@@ -1,6 +1,3 @@
-from typing import List, Set
-
-
 class WordSearch:
     """
     Problem Link: https://leetcode.com/problems/word-search/
@@ -11,11 +8,11 @@ class WordSearch:
 
     def track_word(
         self,
-        board: List[List[str]],
+        board: list[list[str]],
         row_idx: int,
         column_idx: int,
         word: str,
-        visited_cells: Set,
+        visited_cells: set,
     ) -> bool:
         if f"{row_idx}:{column_idx}" in visited_cells:
             return False
@@ -53,10 +50,10 @@ class WordSearch:
 
         return word_was_found
 
-    def exist(self, board: List[List[str]], word: str) -> bool:
+    def exist(self, board: list[list[str]], word: str) -> bool:
         row_nums: int = len(board)
         column_nums: int = len(board[0])
-        visited_cells: Set = set()
+        visited_cells: set = set()
 
         for i in range(row_nums):
             for j in range(column_nums):

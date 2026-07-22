@@ -1,6 +1,3 @@
-from typing import List
-
-
 class ThreeSum:
     """
     Problem Link: https://leetcode.com/problems/3sum/
@@ -10,7 +7,7 @@ class ThreeSum:
     Memory: 17MB
     """
 
-    def threeSum(self, nums: List[int]) -> List[List[int]]:
+    def threeSum(self, nums: list[int]) -> list[list[int]]:
         num_len: int = len(nums)
         if num_len == 0:
             return []

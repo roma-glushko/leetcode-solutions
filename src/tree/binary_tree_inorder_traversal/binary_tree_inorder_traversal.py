@@ -1,5 +1,3 @@
-from typing import List
-
 from . import TreeNode
 
 
@@ -12,7 +10,7 @@ class BinaryTreeInorderTraversal:
     Memory: 14MB
     """
 
-    def inorderTraversal(self, root: TreeNode) -> List[int]:
+    def inorderTraversal(self, root: TreeNode) -> list[int]:
         result = []
 
         if not root:

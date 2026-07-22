@@ -1,6 +1,3 @@
-from typing import List, Set
-
-
 class NumberOfIslands:
     """
     Problem Link: https://leetcode.com/problems/number-of-islands/
@@ -13,12 +10,12 @@ class NumberOfIslands:
     def get_land_id(self, row_idx: int, col_idx: int) -> str:
         return "{}:{}".format(row_idx, col_idx)
 
-    def numIslands(self, grid: List[List[str]]) -> int:
+    def numIslands(self, grid: list[list[str]]) -> int:
         grid_height = len(grid)
         grid_width = len(grid[0])
 
         num_of_islands: int = 0
-        explored_lands: Set = set()
+        explored_lands: set = set()
 
         def explore_island(row_idx: int, col_idx: int) -> None:
             land_id: str = self.get_land_id(row_idx, col_idx)

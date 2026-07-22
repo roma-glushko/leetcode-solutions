@@ -1,13 +1,10 @@
-from typing import List
-
-
 class SearchInRotatedSortedArray:
     """
     Problem Link: https://leetcode.com/problems/search-in-rotated-sorted-array/
     Complexity: Medium
     """
 
-    def search(self, nums: List[int], target: int) -> int:
+    def search(self, nums: list[int], target: int) -> int:
         start_idx = 0
         end_idx = len(nums) - 1
 

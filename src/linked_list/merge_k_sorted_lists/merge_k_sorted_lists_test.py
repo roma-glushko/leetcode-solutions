@@ -1,11 +1,10 @@
-from typing import List
 from unittest import TestCase
 
 from .merge_k_sorted_lists import ListNode, MergeKSortedLists
 
 
 class MergeKSortedListsTest(TestCase):
-    def get_values_from_list(self, list_head: ListNode) -> List:
+    def get_values_from_list(self, list_head: ListNode) -> list:
         list_values = []
         current_node = list_head
 
@@ -17,7 +16,7 @@ class MergeKSortedListsTest(TestCase):
         return list_values
 
     def test_default_input(self):
-        list_elements: List[ListNode] = [
+        list_elements: list[ListNode] = [
             ListNode(1, ListNode(4, ListNode(5))),
             ListNode(1, ListNode(3, ListNode(4))),
             ListNode(2, ListNode(6)),

@@ -1,6 +1,3 @@
-from typing import List
-
-
 class ProductOfTheLastKNumbers:
     """
     Problem Link: https://leetcode.com/problems/product-of-the-last-k-numbers/
@@ -11,7 +8,7 @@ class ProductOfTheLastKNumbers:
     """
 
     def __init__(self):
-        self.number_sequence: List[int] = []
+        self.number_sequence: list[int] = []
 
     def add(self, num: int) -> None:
         if num == 0:

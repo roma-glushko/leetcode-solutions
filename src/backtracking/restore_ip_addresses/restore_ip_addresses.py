@@ -1,6 +1,3 @@
-from typing import List
-
-
 class RestoreIPAddresses:
     """
     Problem Link: https://leetcode.com/problems/restore-ip-addresses/
@@ -9,8 +6,8 @@ class RestoreIPAddresses:
     Memory: 14.2MB
     """
 
-    def restoreIpAddresses(self, string: str) -> List[str]:
-        ip_list: List[str] = []
+    def restoreIpAddresses(self, string: str) -> list[str]:
+        ip_list: list[str] = []
 
         def is_valid_submask(submask: str) -> bool:
             if len(submask) > 1 and submask.startswith("0"):

@@ -1,6 +1,3 @@
-from typing import List
-
-
 class CourseScheduleII:
     """
     Problem Link: https://leetcode.com/problems/course-schedule-ii/
@@ -15,7 +12,7 @@ class CourseScheduleII:
     course_in_planning: int = 1
     course_scheduled: int = 2
 
-    def plan_course(self, course_idx: int, course_requirements: List[int]) -> List[int]:
+    def plan_course(self, course_idx: int, course_requirements: list[int]) -> list[int]:
         if self.course_status[course_idx] == self.course_scheduled:
             return []
 
@@ -25,7 +22,7 @@ class CourseScheduleII:
 
         self.course_status[course_idx] = self.course_in_planning
 
-        course_schedule: List[int] = []
+        course_schedule: list[int] = []
 
         for required_course_idx in course_requirements:
             course_schedule.extend(
@@ -39,10 +36,10 @@ class CourseScheduleII:
 
         return course_schedule
 
-    def findOrder(self, num_courses: int, prerequisites: List[List[int]]) -> List[int]:
-        self.course_schedule: List[int] = []
-        self.course_status: List[int] = [self.course_to_be_planned] * num_courses
-        self.course_requirements: List[List[int]] = [[] for _ in range(num_courses)]
+    def findOrder(self, num_courses: int, prerequisites: list[list[int]]) -> list[int]:
+        self.course_schedule: list[int] = []
+        self.course_status: list[int] = [self.course_to_be_planned] * num_courses
+        self.course_requirements: list[list[int]] = [[] for _ in range(num_courses)]
 
         for dependant_course_idx, dependency_course_idx in prerequisites:
             self.course_requirements[dependant_course_idx].append(dependency_course_idx)

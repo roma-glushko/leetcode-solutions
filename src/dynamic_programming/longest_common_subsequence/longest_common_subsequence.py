@@ -1,6 +1,3 @@
-from typing import List
-
-
 class LongestCommonSubsequence:
     """
     Problem Link: https://leetcode.com/problems/longest-common-subsequence/
@@ -11,7 +8,7 @@ class LongestCommonSubsequence:
         text1_len: int = len(text1)
         text2_len: int = len(text2)
 
-        longest_subseq_lengths: List[List[int]] = [
+        longest_subseq_lengths: list[list[int]] = [
             [0] * (text2_len + 1) for _ in range(text1_len + 1)
         ]
 

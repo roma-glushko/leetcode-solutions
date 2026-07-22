@@ -1,6 +1,3 @@
-from typing import List, Set
-
-
 class FindAllDuplicatedInAnArray:
     """
     Problem Link: https://leetcode.com/problems/find-all-duplicates-in-an-array/
@@ -10,9 +7,9 @@ class FindAllDuplicatedInAnArray:
     Memory: 23.4MB
     """
 
-    def findDuplicates(self, nums: List[int]) -> List[int]:
-        detected_numbers: Set = set()
-        duplicated_numbers: List[int] = []
+    def findDuplicates(self, nums: list[int]) -> list[int]:
+        detected_numbers: set = set()
+        duplicated_numbers: list[int] = []
 
         for number in nums:
             if number in detected_numbers:

@@ -1,13 +1,10 @@
-from typing import List
-
-
 class ReverseString:
     """
     Problem Link: https://leetcode.com/problems/reverse-string/
     Complexity: Easy
     """
 
-    def reverse_string(self, s: List[str]) -> None:
+    def reverse_string(self, s: list[str]) -> None:
         """
         Do not return anything, modify s in-place instead.
         """

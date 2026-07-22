@@ -1,5 +1,3 @@
-from typing import List
-
 from . import TreeNode
 
 
@@ -12,7 +10,7 @@ class BinaryTreePostorderTraversal:
     Memory: 14.3 MB
     """
 
-    def postorderTraversal(self, root: TreeNode) -> List[int]:
+    def postorderTraversal(self, root: TreeNode) -> list[int]:
         result = []
 
         if not root:

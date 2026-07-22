@@ -1,6 +1,3 @@
-from typing import List, Set
-
-
 class MaxAreaOfIsland:
     """
     Problem Link: https://leetcode.com/problems/max-area-of-island/
@@ -13,12 +10,12 @@ class MaxAreaOfIsland:
     def get_land_id(self, row_idx: int, col_idx: int) -> str:
         return "{}:{}".format(row_idx, col_idx)
 
-    def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
+    def maxAreaOfIsland(self, grid: list[list[int]]) -> int:
         grid_height = len(grid)
         grid_width = len(grid[0])
 
         max_area: int = 0
-        explored_lands: Set = set()
+        explored_lands: set = set()
 
         def calculate_island_area(row_idx: int, col_idx: int) -> int:
             land_id = self.get_land_id(row_idx, col_idx)

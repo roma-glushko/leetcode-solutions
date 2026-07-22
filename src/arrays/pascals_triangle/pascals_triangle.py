@@ -1,22 +1,19 @@
-from typing import List
-
-
 class PascalsTriangle:
     """
     Problem Link: https://leetcode.com/problems/pascals-triangle/
     Complexity: Easy
     """
 
-    def generate(self, num_rows: int) -> List[List[int]]:
-        pascal_triangle: List[List[int]] = [[1]]
+    def generate(self, num_rows: int) -> list[list[int]]:
+        pascal_triangle: list[list[int]] = [[1]]
 
         for row_idx in range(num_rows):
             if row_idx == 0:
                 continue
 
-            next_triangle_row: List[int] = []
+            next_triangle_row: list[int] = []
 
-            previous_triangle_row: List[int] = pascal_triangle[row_idx - 1]
+            previous_triangle_row: list[int] = pascal_triangle[row_idx - 1]
             previous_triangle_row_len: int = len(previous_triangle_row)
 
             for num_idx in range(previous_triangle_row_len + 1):
