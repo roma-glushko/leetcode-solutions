@@ -1,24 +1,19 @@
-from unittest import TestCase
-
 from .three_sum import ThreeSum
 
 
-class ThreeSumTest(TestCase):
-    def test_base_input(self):
-        solution = ThreeSum()
+def test_base_input():
+    solution = ThreeSum()
+    assert sorted(solution.threeSum2([-1, 0, 1, 2, -1, -4])) == sorted(
+        [(-1, -1, 2), (-1, 0, 1)]
+    )
 
-        self.assertCountEqual(
-            [(-1, -1, 2), (-1, 0, 1)], solution.threeSum2([-1, 0, 1, 2, -1, -4])
-        )
 
-    def test_empty_case(self):
-        solution = ThreeSum()
+def test_empty_case():
+    solution = ThreeSum()
+    assert sorted(solution.threeSum([])) == sorted([])
 
-        self.assertCountEqual([], solution.threeSum([]))
 
-    def test_too_little_elements_case(self):
-        solution = ThreeSum()
-
-        self.assertCountEqual([], solution.threeSum([0]))
-
-        self.assertCountEqual([], solution.threeSum([1, -1]))
+def test_too_little_elements_case():
+    solution = ThreeSum()
+    assert sorted(solution.threeSum([0])) == sorted([])
+    assert sorted(solution.threeSum([1, -1])) == sorted([])

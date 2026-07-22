@@ -1,4 +1,4 @@
-from . import TreeNode
+from .. import TreeNode
 
 
 class BinaryTreePostorderTraversal:

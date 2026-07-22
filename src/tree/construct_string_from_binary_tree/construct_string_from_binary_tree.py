@@ -1,4 +1,4 @@
-from src.tree import TreeNode
+from .. import TreeNode
 
 
 class ConstructStringFromBinaryTree:

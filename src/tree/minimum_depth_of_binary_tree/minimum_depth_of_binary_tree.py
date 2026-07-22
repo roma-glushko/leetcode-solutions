@@ -1,6 +1,6 @@
 import math
 
-from src.tree import TreeNode
+from .. import TreeNode
 
 
 class MinimumDepthOfBinaryTree:

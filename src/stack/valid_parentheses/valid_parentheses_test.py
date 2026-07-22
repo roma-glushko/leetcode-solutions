@@ -1,19 +1,15 @@
-from unittest import TestCase
-
 from .valid_parentheses import ValidParentheses
 
 
-class ValidParenthesesTest(TestCase):
-    def test_valid(self):
-        solution = ValidParentheses()
+def test_valid():
+    solution = ValidParentheses()
+    assert solution.isValid("()")
+    assert solution.isValid("()[]{}")
+    assert solution.isValid("{[]}")
 
-        self.assertTrue(solution.isValid("()"))
-        self.assertTrue(solution.isValid("()[]{}"))
-        self.assertTrue(solution.isValid("{[]}"))
 
-    def test_invalid(self):
-        solution = ValidParentheses()
-
-        self.assertFalse(solution.isValid("]"))
-        self.assertFalse(solution.isValid("(]"))
-        self.assertFalse(solution.isValid("([)]"))
+def test_invalid():
+    solution = ValidParentheses()
+    assert not solution.isValid("]")
+    assert not solution.isValid("(]")
+    assert not solution.isValid("([)]")
