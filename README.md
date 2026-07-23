@@ -17,7 +17,7 @@ make gen
 
 ## Leetcode 
 
-In total, there are 53 problems solved:
+In total, there are 54 problems solved:
 
 - Python: 53
 - Go: 3
@@ -50,6 +50,7 @@ Find all of them below.
 - (Easy) [Design Parking System](https://leetcode.com/problems/design-parking-system/) ([Python](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/design/design_parking_system/design_parking_system.py)) 
 - (Easy) [Min Stack](https://leetcode.com/problems/min-stack/) ([Python](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/design/min_stack/min_stack.py)) 
 - (Medium) [LRU Cache](https://leetcode.com/problems/lru-cache/) ([Python](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/design/lru_cache/lru_cache.py)) 
+- (Medium) [Seat Reservation Manager](https://leetcode.com/problems/seat-reservation-manager) ([Python](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/design/seat_reservation_manager/seat_reservation_manager.py)) 
 - (Hard) [Design Inmemory Filesystem](https://leetcode.com/problems/design-in-memory-file-system/) ([Python](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/design/design_inmemory_filesystem/design_inmemory_filesystem.py)) 
 
  ### DFS 
@@ -138,7 +139,7 @@ Implementation exercises for common design primitives (1 total).
 
  ### Design 
 
-- (Medium) [Token Bucket Rate Limiter](https://en.wikipedia.org/wiki/Token_bucket) ([Python](https://github.com/roma-glushko/leetcode-solutions/tree/master/src/design/token_bucket_rate_limiter/token_bucket_rate_limiter.py)) 
+- (Medium) [Token Bucket Rate Limiter](https://en.wikipedia.org/wiki/Token_bucket) () 
 
 ## Credits 
 

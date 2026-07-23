@@ -189,7 +189,7 @@ def generate_section_markdown(problems: list[Problem]) -> str:
 
 
 def update_readme_file(readme_path: Path, new_section_content: str) -> None:
-    section_pattern: str = r"(?P<list_section>## Problem List (.|\s|)*)"
+    section_pattern: str = r"(?P<list_section>## Leetcode (.|\s|)*)"
 
     with open(readme_path, "r") as readme_file:
         readme_content: str = readme_file.read()
